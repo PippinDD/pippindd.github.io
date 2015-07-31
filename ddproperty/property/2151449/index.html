@@ -1,0 +1,2226 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta lang="th"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAAAV1BADAMAUFdX"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),u=c.document,f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+
+<title>ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล | ขายคอนโด ราษฎร์บูรณะ กรุงเทพ</title>
+
+<meta name="description" content="ข้อมูลประกาศ 2151449 2015-07-31 15:05:12 : ขายคอนโด ราษฎร์บูรณะ กรุงเทพ - ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล" />
+
+<meta name="keywords" content="agent, listing, real estate, property, sale, rent, apartment, house, expatriate, housing, hdb, location, condominium, map" />
+
+<meta name="apple-itunes-app" content="app-id=487558434" />
+<meta name="google-play-app" content="app-id=com.allproperty.android.consumer.th" />
+
+<link rel="canonical" href="/property/ขายถูกมากๆ-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคาเพียง-2151449" />
+
+
+<link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/search.xml" title="DDproperty.com Search" />
+<link rel="apple-touch-icon" href="/images/mobile/touch-logo.png" />
+<link rel="android-touch-icon" href="/images/mobile/touch-logo.png" />
+
+
+
+
+	<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/dd/general.css?290715_10" type="text/css"/>
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/dd/static.css?290715_10" type="text/css"/>
+	<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/lib.css?290715_10" type="text/css"/>
+	
+			
+		
+		
+		
+		
+		<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/dd/th.css?290715_10" type="text/css"/>
+	
+
+
+
+
+
+
+<meta property="og:type" content="article"/><meta property="og:url" content="http://www.ddproperty.com/property/ขายถูกมากๆ-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคาเพียง-2151449"/><meta property="og:image" content="http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704089.V550.jpg"/>
+<meta property="og:title" content="ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล"/>
+<meta property="og:description" content="ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล้าน ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล้าน
+ห้องเเต่งครบ พร้อมอยู่ พื้นที่ 31 ตรม. ห้องมุม ชั้น 7 ประกอบด้วย 1 ห้องนอน 1 เตียงนอนมี แถมตู้เสื้อผ้า ในห้องนอน , 1 ห้องน้ำ 1 เเยกโชนเปียกโซนเเห้ง ห้องนั่งเล่น และครัว Build-In
+ฟรี สันทนาการ มีสระว่ายน้ำ, ฟิตเนส, ห้องสมุด, เครื่องซักผ้าหยอดเหรียญเอง, สวนหย่อม, คีย์การ์ดขึ้นตึก, รปภ24ชั่วโมง,CCTV 
+
+อุปกรณ์ในห้องประกอบด้วย 
+เตียง 5 ฟุต, ตู้เสื้อผ้า เตียงห้องนอน โซฟา (ผ้าม่านทั้งห้องนอน ห้องรับแขก)
+เครื่องใช้ไฟฟ้า มีแอร์ห้องนอน, ทีวี 
+
+สถานที่ใกล้เคียง
+-	Super market / 7-11 
+-	ใกล้สำนักงานใหญ่กสิกร ใกล้การไฟฟ้านครหลวง 
+-	ใกล้โรพยาบาล 
+-	เดินทางสะดวก มีรถประจำทางผ่านตลอด 
+ข้อดีๆอื่นๆ 
+-   ห้องนี้เป็นห้องมุม อีกฝั่งไม่ติดกับใคร เป็นส่วนตัวสุดๆ
+-   แยกห้องนอนห้องรับแขกชัดเจนเป็นสัดเป็นส่วน
+-   วิวเเม่น้ำเจ้าพระยา
+ ** ค่าธรรมเนียมโอน จ่ายคนละครึ่งครับ **
+โทรมาก่อนมีสิทธิ์ก่อนนะครับ 
+ติดต่อ คุณชาน  Tel 0867259098 Line ID: Asikab  mail chanwitpwk@hotmail.com 
+***งดรับนายหน้านะครับ ***" />
+<meta property="og:publisher" content="http://www.ddproperty.com"/>
+
+
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/new_search/modernizr-2.5.3.min.js?290715_10"></script>
+
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/jquery.js?290715_10"></script>
+
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/jquery.ui.js?290715_10"></script>
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/uilib.th.js?290715_10"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/rating.js?290715_10"></script>
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/ps/listingitem.js?290715_10"></script>
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/ga.tracking.js?290715_10"></script>
+
+
+
+
+	
+	
+
+<script type="text/javascript">
+//<!--
+var GMAP_KEY = "AIzaSyCXqUxV77ZBPmitLXqSd6WV-WGvgQuuUi4";
+var REGION = "TH";
+var SITENAME_PROPERTYSEARCH = "DDproperty.com";
+var SITEURL_PROPERTYSEARCH = "DDproperty.com";
+var addthis_config = { ui_language: "th" };
+//-->
+jQuery(function($) {
+	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+		$("#nav li a").click(function(){
+			if ($(this).parents('li').find('ul').length > 0) {
+				if (!$(this).parents('li').find('ul').is(':visible')) {
+					$(this).parents('li').find('ul').toggle();
+					return false;
+				}
+			}
+		});
+	}
+});
+</script>
+<!-- GOOGLE AD MANAGER -->
+		
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<script type='text/javascript'>
+var gptadslots=[];
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+    var gads = document.createElement('script');
+    gads.async = true; gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+</script>
+<script type='text/javascript'>
+    //script - Criteo
+    if (!crtg_content) {
+        var crtg_content='';
+    }
+    gptadslots[1]=googletag.defineSlot('/133034368/ddproperty_thai/proplisting/top_leaderboard', [[728,90],[970,90]],'ddproperty_thai_proplisting_top_leaderboard').addService(googletag.pubads());
+    gptadslots[2]=googletag.defineSlot('/133034368/ddproperty_thai/proplisting/bottom_leaderboard', [[728,90],[970,90]],'ddproperty_thai_proplisting_bottom_leaderboard').addService(googletag.pubads());
+    gptadslots[3]=googletag.defineSlot('/133034368/ddproperty_thai/proplisting/showcase_1', [[300,250],[300,600]],'ddproperty_thai_proplisting_showcase_1').addService(googletag.pubads());
+    gptadslots[4]=googletag.defineSlot('/133034368/ddproperty_thai/proplisting/showcase_2', [[300,250],[300,600]],'ddproperty_thai_proplisting_showcase_2').addService(googletag.pubads());
+    gptadslots[5]=googletag.defineSlot('/133034368/ddproperty_thai/proplisting/showcase_3', [[300,250],[300,600]],'ddproperty_thai_proplisting_showcase_3').addService(googletag.pubads());
+    //splitting script - Criteo
+    var crtg_split = (crtg_content || '').split(';');
+    var pubads = googletag.pubads();
+    for (var i=1;i<crtg_split.length;i++){
+        pubads.setTargeting('' + (crtg_split[i-1].split('='))[0] + '', '' + (crtg_split[i-1].split('='))[1] + '');
+    }
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().setTargeting('language', 'th');
+    googletag.pubads().setTargeting('Page_id', 'listing');
+    googletag.pubads().setTargeting('env', 'prod');
+    googletag.pubads().setTargeting('Pagetype', 'Detail');
+    googletag.pubads().setTargeting('Province', 'Bangkok');
+    googletag.pubads().setTargeting('District', 'Rat Burana');
+    googletag.pubads().setTargeting('Proptype', 'Condo');
+    googletag.pubads().setTargeting('Prpty_id', '632');
+    googletag.pubads().enableSyncRendering();
+	googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+</script>
+
+	
+
+<!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "13151479" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=13151479&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- GOOGLE ANALYTICS CODE -->
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-3001658-1']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+_gaq.push(['guru._setAccount', 'UA-2417512-17']);
+_gaq.push(['guru._setDomainName', 'none']);
+_gaq.push(['guru._setAllowLinker', true]);
+_gaq.push(['guru._trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+_gaq.push(['guru._trackPageLoadTime']);
+	(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+
+<body id="listing">
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TRGCN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5TRGCN');
+</script>
+<!-- End Google Tag Manager -->
+
+<!--// Facebook like button -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+<!--// END: Facebook like button -->
+
+
+<div id="maincontainer">
+
+    <div id="header">
+
+    	<div id="header_main">
+			
+	<div id="headerleft">
+		 <a href="/" title="DDproperty.com คอนโด บ้านมือสอง ขายบ้าน">คอนโด บ้านเดี่ยว ทาวน์เฮ้าส์/ทาวน์โฮม บ้านมือสอง</a>
+	</div>			
+
+			<script type="text/javascript">
+
+<!--
+$(document).ready(function() {
+	$('#search_q').labelify();
+	$('#search_q').click(function() {
+		if ($('#search_q').val() == $('#search_q').attr('title')) {
+			$('#search_q').val('');
+		}
+	});
+	$('#partnerlinks').hover(function() {
+		$('#partnerlinks').removeClass('map').addClass('map_open');
+	}, function() {
+		$('#partnerlinks').removeClass('map_open').addClass('map');
+	});
+	$('#partnerlinks').click(function() {
+		if ($('#partnerlinks').hasClass('map')) $('#partnerlinks').removeClass('map').addClass('map_open');
+		else $('#partnerlinks').removeClass('map_open').addClass('map');
+	});
+	$('#headregionbar ul.country').click(function(event) {
+		event.cancelBubble = true; // MSIE
+		event.stopPropagation();
+	});
+});
+//-->
+
+</script>
+
+		<div id="headerright" style="background:none">
+			<div id="headregionbar">
+				<div class="map" id="partnerlinks">
+                    <ul class="country">
+                        <li><a href="http://www.propertyguru.com.sg" target="_blank" id="sg">สิงคโปร์</a></li>
+                        <li><a href="http://www.propertyguru.com.my" target="_blank" id="my">มาเลเซีย</a></li>
+                        <li><a href="http://www.rumah.com" target="_blank" id="id">อินโดนิเชีย</a></li>
+                        
+						<li><a href="http://www.immobilienscout24.de" target="_blank" rel="nofollow" id="de">เยอรมนี</a></li>
+                        <li><a href="http://www.domain.com.au"  target="_blank" rel="nofollow" id="aus">ออสเตรเลีย</a></li>
+						<li><a href="http://www.immobilienscout24.at" target="_blank" rel="nofollow" id="at">ออสเตรีย</a></li>
+						<li><a href="http://www.immoscout24.ch" target="_blank" rel="nofollow" id="ch">สวิตเซอร์แลนด์</a></li>
+                        
+                        <li><a href="http://www.soufun.com" target="_blank" rel="nofollow" id="cn">ประเทศจีน</a></li>
+                        <li><a href="http://www.28hse.com" target="_blank" id="hk">ฮ่องกง</a></li>
+                        <li><a href="http://www.99acres.com" target="_blank" rel="nofollow" id="in">อินเดีย</a></li>
+                        
+                        <li><a href="http://www.batdongsan.com.vn" target="_blank" id="vn">เวียดนาม</a></li>
+                        <li class="bottom"></li>
+                    </ul>
+                </div>
+			</div>
+            
+			<div id="headsearchbar">
+								
+                <a href="/ลงทะเบียน" rel="nofollow"><span class="yellowtext">สมัครสมาชิก ฟรี!</span></a> |
+                <a href="javascript:openLoginDialog('/')" rel="nofollow">เข้าสู่ระบบ</a> |
+                
+                                
+            	
+                <a href="/mobile" style="text-transform: none;">Mobile Apps</a> | 
+                
+                
+            	
+				
+                				
+                <a href="/ตัวแทน" title="ตัวแทนอสังหาริมทรัพย์ในประเทศไทย">ตัวแทนอสังหาริมทรัพย์</a>
+				
+				
+				
+				
+			</div>
+						
+			
+<style type="text/css">
+#headlanguagebar .btn.active, #headlanguagebar .btn.active:hover, #headlanguagebar .btn:active { filter:none; }
+</style>
+			<div id="headlanguagebar">
+			<div class="btn-group" style="display:inline-block;">
+				<a href="http://www.ddproperty.com/en" class="btn btn-mini">English</a>
+				<a href="http://www.ddproperty.com" class="btn btn-mini active">ภาษาไทย</a>
+			</div>
+		</div>
+	
+			
+			<div class="clearboth"></div>
+			
+			
+						
+			
+
+
+		</div>
+
+			
+<div style="position:absolute; height:49px; width:157px; right:0; top:78px">
+			<a href="/ลงประกาศ"><img src="http://th1-cdn.pgimgs.com/images/dd/ownerlisting_tab.th_TH.png" alt="ownerlisting_tab" width="157" /></a>
+	</div>
+
+		</div>
+		<div id="header_navi">
+			<script type="text/javascript">
+$('#find_property').show();
+$('#resources').show();
+$('#lifestyle').show();
+</script>
+
+<div class="navitabs">
+    <ul id="nav">
+    	<li class="selected descendent">    <a href="/" title="ค้นหาประกาศ เพื่อขายและให้เช่า">ค้นหาประกาศ</a>
+        <ul class="dropdown" id="find_property" style="display:none">
+            <li><a href="/รวมประกาศขาย/1" class="underline" title="ประกาศขาย อสังหาริมทรัพย์ใน ประเทศไทย"><span>ประกาศขาย</span></a></li>
+            <li><a href="/รวมประกาศให้เช่า/1" class="underline" title="ประกาศให้เช่า อสังหาริมทรัพย์ใน  ประเทศไทย"><span>ประกาศให้เช่า</span></a></li>
+            <li><a href="/รวมโครงการใหม่" class="underline" title="บ้าน โครงการใหม่ใน ประเทศไทย"><span>บ้าน โครงการใหม่ ประเทศไทย </span></a></li>            <li><a href="/อสังหาฯ-เชิงพาณิชย์/1" class="underline" title="อสังหาริมทรัพย์เชิงพาณิชย์"><span>อสังหาริมทรัพย์เชิงพาณิชย์</span></a></li>            <li><a href="/อสังหาริมทรัพย์ในต่างประเทศ" class="underline" title="ค้นหาอสังหาฯ ในต่างประเทศ"><span>โครงการในต่างประเทศ</span></a></li>                                                <li><a href="/ทำเลยอดนิยม" class="underline" title="Find Popular Areas"><span>ทำเลน่าสนใจ</span></a></li>        </ul>
+    </li>
+
+        <li>	<a href="/โครงการ-คอนโด" title="ประเทศไทย คอนโด">โครงการคอนโด</a></li>
+    
+    
+    
+        <li>    <a href="/รวมโครงการใหม่" title="บ้าน โครงการใหม่ ประเทศไทย ">โครงการใหม่</a></li>
+    
+        <li>    <a href="/อสังหาริมทรัพย์ในต่างประเทศ" title="อสังหาริมทรัพย์ใน ประเทศไทย">ต่างประเทศ</a></li>
+    
+        <li>    <a href="/ถามกูรู" title="สอบถามผู้เชี่ยวชาญเกี่ยวกับ ประเทศไทย ถาม-ตอบ อสังหาริมทรัพย์">ถามกูรู</a></li>
+    
+        <li>    <a href="/นายหน้า" title="ค้นหาตัวแทนด้านอสังหาฯ  ประเทศไทย ">ค้นหาตัวแทน</a></li>
+    
+    
+    
+    	    <li>	    <a href="/ข่าวอสังหาริมทรัพย์-บทความ" title="ประเทศไทย ข้อมูลตลาดอสังหาฯ">ข่าว/บทความ</a></li>
+    
+        <li class="descendent">    <a href="/คู่มือซื้อขาย" title="ประเทศไทย แหล่งข้อมูลเกี่ยวกับอสังหาฯ">คู่มือซื้อขาย</a>
+		
+	    <ul class="dropdown" id="resources" style="display:none">
+			<li><a href="/คู่มือซื้อขาย/เตรียมตัวก่อนซื้อ" class="underline" title="ต้องการซื้ออสังหาริมทรัพย์"><span>คู่มือการซื้ออสังหาริมทรัพย์</span></a></li>
+			<li><a href="/คู่มือซื้อขาย/เตรียมตัวก่อนขาย" class="underline" title="ต้องการขายอสังหาริมทรัพย์"><span>คู่มือแนะนำการขายอสังหาริมทรัพย์</span></a></li>
+			<li><a href="/คู่มือซื้อขาย/ควรรู้ก่อนเช่า" class="underline" title="ต้องการเช่าอสังหาริมทรัพย์"><span>แนะนำก่อนเช่าอสังหาริมทรัพย์</span></a></li>
+			<li><a href="/คู่มือซื้อขาย/ควรรู้ก่อนให้เช่า" class="underline" title="ควรรู้ก่อนให้เช่าอสังหาฯ"><span>แนะนำการให้เช่าอสังหาริมทรัพย์</span></a></li>
+			<li><a href="/property-mortgages-calculator" class="underline" title="คำนวณสินเชื่อเพื่อที่อยู่อาศัย"><span>คำนวณสินเชื่อเพื่อที่อยู่อาศัย</span></a></li>
+
+			
+						</ul>
+		
+    </li>
+        </ul>
+</div>
+		</div>
+
+	</div> <!-- head end -->
+	 
+<div id="submenu">
+	<ul>
+		<li>
+			<a href="/คอนโด">คอนโด</a>
+		</li>
+		<li class="border"></li>
+		<li>
+			<a href="/บ้านเดี่ยว">บ้านเดี่ยว</a>
+		</li>
+		<li class="border"></li>
+		<li>
+			<a href="/ทาวน์เฮ้าส์">ทาวน์เฮ้าส์</a>
+		</li>
+		<li class="border"></li>
+		<li>
+			<a href="/ที่ดิน">ที่ดิน</a>
+		</li>
+		<li class="border"></li>
+		<li>
+			<a href="/อพาร์ทเมนท์">อพาร์ทเมนท์</a>
+		</li>
+		<li class="border"></li>
+
+		
+		<li>
+			<a href="/อสังหาฯ-เชิงพาณิชย์">เชิงพาณิชย์</a>
+		</li>
+		<li class="border"></li>
+
+				<li>
+			<a href="/ทำเลยอดนิยม">ทำเลน่าสนใจ</a>
+		</li>
+		<li class="border"></li>
+			</ul>
+</div>
+
+
+	<div id="bodycontainer">
+
+	   		    			
+		<script type="text/javascript">
+$(document).ready(function() {
+	$('#toolbar li a').tipsy();
+	var placeholder = $('#toolbar');
+	var placeholder_top = $('#toolbar').offset().top;
+	var toolbar = $('#toolbar_float');
+	toolbar.css('z-index','999');
+	var view = $(window);
+	var blueline = $('<div/>').css('height','5px').css('top','0').css('left','0').css('width','100%').css('z-index','99990').css('position','fixed').css('background-color','#0A5C9F').css('display','none');
+	$('#toolbar').append(blueline);
+	view.bind(
+		'scroll resize',
+		function () {
+			var view_top = view.scrollTop();
+			if (view_top > placeholder_top && toolbar.css('position') != 'fixed') {
+				toolbar.css('top', '5px').css('left', toolbar.offset().left).css('position', 'fixed');
+				blueline.css('display','block');
+			}
+			else if (view_top <= placeholder_top && toolbar.css('position') == 'fixed') {
+				toolbar.css('top', 'auto').css('left', 'auto').css('position', 'static');
+				blueline.css('display','none');
+			}
+		}
+	);
+});
+</script>
+
+<div id="toolbar">
+<div id="toolbar_float">
+	<div class="left_grey">
+		<ul>
+						<li class="profile_grey">
+				<a href="javascript:openLoginDialog('/user-profile')" title="โพรไฟล์ของฉัน">&nbsp;</a>
+			</li>
+			<li class="shortlist">
+							<a href="/shortlist" title="ประกาศที่บันทึกไว้">&nbsp;<span id="shortlist_count" style="display: none"></span></a>
+			</li>
+			<li class="email_grey">
+				<a href="javascript:openLoginDialog('/alerts')" title="การแจ้งเตือนอีเมลของฉัน">&nbsp;</a>
+			</li>
+            	            <li class="quest_grey">
+					<a href="javascript:openLoginDialog('/ถามกูรู-คำถามของฉัน')" title="คำถามของฉัน">&nbsp;</a>
+				</li>
+            			
+			<li class="enquiry_grey">
+				<a href="javascript:openLoginDialog('/myenquiries')" title="ประกาศหาซื้อ/เช่า ของฉัน">&nbsp;</a>
+			</li>
+		</ul>
+	</div>
+	<div class="right_grey">&nbsp;</div>
+</div>
+</div>
+
+
+
+	
+<div class="clearboth"></div>
+
+			
+    <!-- GOOGLE AD MANAGER -->
+    		
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<div align="center"><div id='ddproperty_thai_proplisting_top_leaderboard'>
+    <script type='text/javascript'>
+    googletag.display('ddproperty_thai_proplisting_top_leaderboard');
+    </script>
+</div>
+<div class='clearboth top10'></div>
+</div>
+
+
+    <link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/dd/media.css?290715_10" type="text/css"/>
+<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/dd/detail.css?290715_10" type="text/css"/>
+<style type="text/css">
+	div.summarytool li a#sharebtn {
+		background:url("/images/dd/sprite_summarytool.png?y=31072558") 5px -156px no-repeat #278ec9;
+	}
+</style>
+<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/propertyguru/new_search/jquery.qtip.css?290715_10" type="text/css"/>
+
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/medialib.th.js?290715_10"></script>
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/jquery.dimensions.js?290715_10"></script>
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/new_search/jquery.qtip.min.js?290715_10"></script>
+
+	
+
+    
+                                    
+    <script type="text/javascript">
+    function getPDF() {
+        location = "/property/ขายถูกมากๆ-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคาเพียง-2151449" + "?action=get_pdf";
+    }
+    
+        var markers = [
+     {
+    'latitude': 13.687158,
+    'longitude': 100.491559
+    }
+    ];
+        
+    $(document).ready(function() {
+                $('#referbtn').click(function() {
+            loadDialog(500, 400, "ส่งประกาศนี้ให้เพื่อน",
+                        '/ps_dialog_refer_listing?itemid=2151449');
+        });
+        
+        $('#smsbtn').click(function() {
+            loadDialog(500, 450, "ส่งเอสเอ็มเอสเกี่ยวกับประกาศนี้ให้เพื่อน",
+                        '/ps_dialog_sms_listing?itemid=2151449');
+        });
+                
+        $('#printbtn').click(function() {
+                window.open('/print_listing_detail?id=2151449', 'viewerwindow', 'fullscreen,scrollbars,resizable=1,location=0,menubar=1,status=0,directories=0,toolbar=0' );
+                
+        });
+        
+        $('#fullscreen').click(function(){
+            window.open('/photo-viewer?id=2151449', 'viewerwindow', 'fullscreen,scrollbars,resizable=1,location=0,menubar=0,status=0,directories=0,toolbar=0' );
+        });
+
+        $('#sharebtn').qtip({
+			position: { my: 'top center', at: 'bottom center' },
+		    content: $('#sharebtn').next('#tooltipLink'),
+			hide: { fixed: true, delay: 300 },
+			style: { classes: 'ui-tooltip-light' }
+		})
+
+        $('#facebook').click(function() {
+			window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), '','menubar=no, toolbar=no, resizeable=yes, scrollbars=yes,height=626, width=436');
+		});
+
+		$('#twitter').click(function() {
+			window.open('https://www.twitter.com/share?url='+encodeURIComponent(location.href), '','menubar=no, toolbar=no, resizeable=yes, scrollbars=yes,height=500, width=500');
+		});
+
+		$('#googleplus').click(function() {
+			window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href), '','menubar=no, toolbar=no, resizeable=yes, scrollbars=yes,height=600, width=600');
+		});
+
+
+
+        
+       
+        var isCtrl;
+        $(document).bind("keydown", "Ctrl+c",function(e){
+            if (e.ctrlKey){
+                isCtrl=true;
+            }else{
+                isCtrl=false;
+            }
+            if(isCtrl){
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if(code==67){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        });
+        
+        $('#ldescription').bind("contextmenu",function(e){
+        return false;
+        });
+    });
+    </script>
+	<script type="text/javascript">
+	jQuery(function($){
+		$('.toptab li').click(function(){
+			$('.toptab li').removeClass('selected');
+			$(this).addClass('selected');
+			$('#forsale, #forrent').hide();
+			$('#' + $(this).attr('id').substr(0,7)).show();
+		});
+	});
+	</script>
+        
+    
+    <!------------------ floating contact button ---------------------->
+    <a href="#contact_agent" id="agent-contact-tab">contact agent</a>    <!------------------ floating contact button ---------------------->
+    	<!-- listing title -->
+	<div id="homefull">
+		<h1 class="listing_title">
+			<a href="/property/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B9%86-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%A5%E0%B8%B8%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B8%B5-%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8E%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%93%E0%B8%B0-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9E%E0%B8%B5%E0%B8%A2%E0%B8%87-2151449">
+													
+																			ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล
+												-
+						คอนโด
+						ขาย
+					
+							</a>
+		</h1>
+		<div class="clearboth"></div>
+	</div>
+	
+	
+		
+	<div id="homeleft">
+	
+		
+		 
+		
+        		
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+<div class="clearboth"></div>
+	<div style="position: relative; z-index: 1;"></div>
+
+
+
+		
+		<!-- basic information -->
+		<div class="box630">
+			<div class="box630_title">
+				<h2>ข้อมูลเบื้องต้น</h2>
+			</div>
+			<div class="box630_description">
+				<div class="box630_container basicinfo">
+					<ul>
+						
+						
+						<li>
+							ID: <span class="bluetext">2151449</span>
+						</li>
+						
+						<li>
+																					คอนโด
+													</li>
+						
+						<li>
+							6/1 ราษฏร์บูรณะ, 10140 																					ราษฎร์บูรณะ, 							กรุงเทพ						</li>
+						
+						<li>
+															31 ตารางเมตร (พื้นที่ใช้สอย)
+																												</li>
+						
+						<li>
+														
+														
+								<li>
+																			<span class="bluebold">1</span> ห้องนอน&nbsp;&nbsp;&nbsp;
+																									
+																			<span class="bluebold">1</span> ห้องน้ำ&nbsp;&nbsp;&nbsp;
+										
+																		
+																	</li>
+							
+														
+														
+							<li class="greytext">
+								ลงประกาศเมือ: 31 กรกฎาคม 2558
+							</li>
+						</li>
+						
+						<li class="price">
+															1,600,000
+														<span class="greytext">บาท</span>														                            						</li>
+						
+						
+						
+						<li class="sponsor">
+						 			
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<div></div>
+	
+
+
+		
+							
+						</li>
+						
+						
+						<!-- property links -->
+						
+												<li>
+							<div class="top10">
+								<a href="/โครงการ/632-lumpini-ville-ราษฎร์บูรณะ-ริเวอร์วิว" class="bluethinlink">ดูโพรไฟล์ LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว</a><img src="http://th2-cdn.pgimgs.com/images/ps/bluearrow.gif" alt="bluearrow" /><br/>
+								<a href="/project-listings/632-lumpini-ville-ราษฎร์บูรณะ-ริเวอร์วิว" class="bluethinlink">ดูรายการอื่นๆ ใน LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว</a><img src="http://th2-cdn.pgimgs.com/images/ps/bluearrow.gif" alt="bluearrow" />
+							</div>
+						</li>
+
+											</ul>
+				</div>
+				
+				<div class="box630_container contact">
+					<!-- contact agent -->
+					<div class="box">
+    <!--h2 class="boxtitle">Contact Agent</h2-->
+    <div class="clearfix font11">
+
+        <!-- Agent Block -->
+        
+		<div class="leadsFormBlock clearfix">
+    		<div class="agent_details">
+    							 	
+					 								<a href="/agent/1480853-chanwit-chokbundit" class="agent_photo"><img src="http://th1-cdn.pgimgs.com/agent/1480853/APHO.9861095.V120B.jpg" alt="chanwit chokbundit" /></a>
+							    		    				
+
+
+        		<div class="agent_info">
+        			<h3 class="font15 mbottom5">chanwit chokbundit</h3>
+    				
+
+        			<div class="tel showNo font12" onclick="_gaq.push(['_trackEvent', 'listing', 'click', 'phonemask']);"><span class="gray">คลิกเพื่อแสดงข้อมูลติดต่อ</span></div>
+
+                    <div class="showNumbers">
+                    														<div class="tel font12"><span>0867259098</span></b></div>													                    </div>
+
+                    
+        		</div>
+    		</div>
+
+    		<div class="agent_company font11">
+    			
+        		<div class="logoName floatL font11">
+        			<p class="bold"></p>
+        				        		<p></p>
+	        		            	</div>
+    		</div>
+		</div>
+
+		<div class="leadsFormBox">
+            <div class="arrow_up"></div>
+
+            <div class="txtC posRel">
+                <a href="#contact_agent" onclick="_gaq.push(['_trackEvent', 'Listing', 'Contact', 'Right Sidebar']);"><img src="http://th1-cdn.pgimgs.com/images/dd/btn-contact.th_TH.gif" alt="btn-contact" width="155" border="0" /></a>
+            </div>           
+        </div>
+
+        <!-- end: Agent Block -->
+                
+				<div class="sepdot top5"></div>
+												<div class="alignleft"><a href="/agent/1480853-chanwit-chokbundit" class="redthinlink">เพิ่มเติม ตัวแทน  โพรไฟล์</a></div>
+					<div class="alignleft"><a href="/agent/1480853-chanwit-chokbundit#agent_listings" class="redthinlink">ดูรายการทั้งหมดใน ตัวแทน</a></div>
+													
+    </div>
+</div>
+        
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        //$('div.tel').tipsy();
+
+        $('div.showNo').click(function() {
+            $(this).hide();
+            $('.showNumbers').fadeIn();
+        });
+    });
+</script>
+				</div>
+				<div class="clearboth"></div>
+			</div>
+			
+			<div class="clearboth"></div>
+			
+			<div class="summarytool">
+				<ul>
+					<li><a href="#contact_agent" id="contactbtn">ติดต่อผู้ลงประกาศ</a></li><li><span id="shortlist_btn_2151449"><a href="javascript:addShortlist(2151449);" id="shortlistbtn">เก็บไว้ดูภายหลัง</a></span></li><li><a href="#" id="referbtn">ส่งหน้านี้ให้เพื่อน</a></li><li><a href="#" id="smsbtn">ส่งข้อความให้เพื่อน</a></li>
+				<li>
+			    	<a href="#" id="sharebtn">แบ่งปัน</a>
+				        <div id="tooltipLink">
+				        	<a href="#" id="facebook">Facebook</a>
+				            <a href="#" id="twitter">Twitter</a>
+				            <a href="#" id="googleplus">Googleplus</a>
+				        </div>
+			    </li>
+			    
+				</ul>
+			</div>
+		</div>
+		
+				<!-- photo carousel -->
+		<div class="box630">
+			<div class="box630_title">
+				<h2>ภาพถ่ายและวีดีโอ</h2>
+			</div>
+			<div class="box630_description">
+				<script type="text/javascript" src="/js/media/swfobject.js"></script>
+
+
+		<script type="text/javascript">
+
+			
+			
+	
+				
+
+
+
+
+
+
+
+
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704089.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704092.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704095.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704134.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704137.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704140.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704203.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704206.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704209.V75B.jpg', 'caption': ''});
+		
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704089.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704092.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704095.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704134.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704137.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704140.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704203.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704206.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704209.V550.jpg', 'caption': '', 'type': 'jpg','width':'','height':''});
+	
+
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th1-cdn.pgimgs.com/property/632/PPHO.1681328.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th1-cdn.pgimgs.com/property/632/PPHO.1681331.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/property/632/PPHO.1681337.V75B.jpg', 'caption': ''});
+		addThumbnailItem('photo_tab', {'thumbnail': 'http://th2-cdn.pgimgs.com/property/632/PPHO.1681349.V75B.jpg', 'caption': ''});
+		
+		addMediaItem('photo_tab', {'showfile': 'http://th1-cdn.pgimgs.com/property/632/PPHO.1681328.V550.jpg', 'caption': '', 'type': 'jpg','width':'550','height':'412'});
+		addMediaItem('photo_tab', {'showfile': 'http://th1-cdn.pgimgs.com/property/632/PPHO.1681331.V550.jpg', 'caption': '', 'type': 'jpg','width':'550','height':'412'});
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/property/632/PPHO.1681337.V550.jpg', 'caption': '', 'type': 'jpg','width':'412','height':'550'});
+		addMediaItem('photo_tab', {'showfile': 'http://th2-cdn.pgimgs.com/property/632/PPHO.1681349.V550.jpg', 'caption': '', 'type': 'jpg','width':'550','height':'412'});
+	
+
+
+
+
+
+
+
+
+</script>
+
+
+<!--TO CHANGE WIDTH, change media_tabs, mediathumbnails_outer, mediadisplay -->
+
+<div class="mediaplayer">
+	<!-- new mediaplayer tabs -->
+		<ul class="mediatab" id="media_tabs"></ul>
+		
+		<div class="clearboth"></div>
+		
+		<div id="mediadisplay" >
+			<noscript>
+			
+
+<!-- Assign the 'alt' for the <img> tag-->
+				
+
+
+
+
+
+<!-- Retrieve Media-->
+
+
+
+
+
+
+			<img src=http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704089.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704089" /><br />
+			<img src=http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704092.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704092" /><br />
+			<img src=http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704095.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704095" /><br />
+			<img src=http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704134.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704134" /><br />
+			<img src=http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704137.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704137" /><br />
+			<img src=http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704140.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704140" /><br />
+			<img src=http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704203.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704203" /><br />
+			<img src=http://th1-cdn.pgimgs.com/listing/2151449/UPHO.13704206.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704206" /><br />
+			<img src=http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704209.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  13704209" /><br />
+	
+
+			<img src=http://th1-cdn.pgimgs.com/property/632/PPHO.1681328.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  1681328" /><br />
+			<img src=http://th1-cdn.pgimgs.com/property/632/PPHO.1681331.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  1681331" /><br />
+			<img src=http://th2-cdn.pgimgs.com/property/632/PPHO.1681337.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  1681337" /><br />
+			<img src=http://th2-cdn.pgimgs.com/property/632/PPHO.1681349.V550.jpg alt="LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว  1681349" /><br />
+	
+
+
+
+
+
+
+
+			</noscript>
+		</div>
+		<div id="docsdisplay"></div>
+		<div style="float:left; width:580px;">
+			<div id="mediabtnleft">
+				<a href="javascript:prevThumbnail();"><img alt="View Previous" src="/images/dd/button_left.gif"/></a>
+			</div>
+			<div id="mediathumbnails_outer" >
+				<div id="mediathumbnails"></div>
+			</div>
+			<div id="mediabtnright">
+				<a href="javascript:nextThumbnail();"><img alt="View Next" src="/images/dd/button_right.gif"/></a>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+		<div name="streetview" id="streetview" class="top10" style="display:none; width: 550px; height: 380px; margin-left:25px"></div>
+</div>
+
+
+
+			</div>
+		</div>
+				
+		<!-- detail -->
+		<div class="box630">
+			<div class="box630_title">
+				<h2>รายละเอียด</h2>
+			</div>
+			<div class="box630_description">
+				<table class="ldetail">
+				<tr>
+					<th>ที่อยู่</th>
+					<td>
+													6/1 ราษฏร์บูรณะ,
+																									10140,
+												
+																									ราษฎร์บูรณะ,
+																			กรุงเทพ
+												
+						
+													<script type="text/javascript">
+$(document).ready(function() {
+	var markers = [{
+		'latitude': 13.687158,
+		'longitude': 100.491559
+	}];
+	
+	function showMap(sat) {
+		var margin = ($(window).height() < 725) ? 60 : 100;
+		var map_height = $(window).height()-margin-50;
+		var url = "/ps_large_map?lat=13.687158&lng=100.491559&map_width=790&map_height="+map_height;
+		if (sat) url += "&sat=true";
+		loadDialog(800, $(window).height()-margin, "แผนที่", url);
+	}
+	
+	$('#small-map').click(function() {
+		showMap();
+	});
+});
+</script>
+<div id="small-map">
+<img src="http://maps.google.com/maps/api/staticmap?key=AIzaSyCXqUxV77ZBPmitLXqSd6WV-WGvgQuuUi4&center=13.687158,100.491559&zoom=15&size=500x100&maptype=roadmap&markers=13.687158,100.491559&sensor=false&language=th&region=TH" alt="ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล"/>
+</div>
+											</td>
+				</tr>
+				<tr>
+					<th>ขนาด</th>
+					<td>
+														
+								31 ตารางเมตร (พื้นที่ใช้สอย)
+																
+																			</td>
+				</tr>
+				<tr>
+					<th>ราคา:</th>
+					<td>
+													<span class="orangebold">
+								1,600,000
+							</span>
+                            												<span class="greybold">(บาท)</span>																	</td>
+				</tr>
+				<tr>
+					<th>ข้อมูลเพิ่มเติม:</th>
+					<td>
+						<div class="box630_container">
+							<table class="detailtable" width="280" cellpadding="0" cellspacing="0">
+														<tr><td width="120">ชื่อโครงการ:</td><td width="150"><b>LUMPINI VILLE ราษฎร์บูรณะ - ริเวอร์วิว</b></td></tr>
+														
+																						<tr><td width="120">ประเภทอสังหาฯ:</td><td width="150"><b>คอนโด</b></td></tr>
+														
+														
+														<tr>
+								<td width="120">ราคา:</td>
+								<td width="150"><b>
+									1,600,000
+									บาท&nbsp;&nbsp;																											</b>
+								</td>
+							</tr>
+														
+														
+														<tr>
+								<td width="120">ราคา (ราคา/ตร.ม.):</td>
+								<td width="150">
+									
+									<b>฿ 51,613 ราคา/ตร.ม. (พื้นที่ใช้สอย)</b>
+									
+								</td>
+							</tr>
+																					<tr>
+								<td width="120">พื้นที่ใช้สอย:</td>
+								<td width="150">
+									<b>31 ตารางเมตร (พื้นที่ใช้สอย)</b>
+								</td>
+							</tr>
+														
+							
+                            							
+																					<tr>
+								<td width="120">หันไปทาง:</td>
+								<td><b>ทิศเหนือ</b></td>
+							</tr>
+														
+									
+							</table>
+						</div>
+						
+						<div class="box630_container">
+							<table class="detailtable" width="280" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="120">สภาพ:</td>
+								<td width="150"><b>
+																			ครบชุด
+																			</b>
+								</td>
+							</tr>
+							
+																							<tr><td width="120">ดำเนินการโดย:</td><td width="150"><b>LPN - แอล.พี.เอ็น. ดีเวลลอปเมนท์ จำกัด (มหาชน)</b></td></tr>
+																																<tr><td width="120">TOP Year:</td><td width="150"><b>2013</b></td></tr>
+															
+														
+							
+																					
+							
+														
+														
+												
+														
+														
+														
+													</table>
+						</div>
+						
+					</td>
+				</tr>
+						<tr>
+		<th>คุณสมบัติพิเศษ:</th>
+		<td>
+						<table cellspacing="0" cellpadding="0" class="detailtable">
+		<tr>
+		<td style="width:200px" valign="top">
+		<ul class="normallist">
+																							   			    	<li>วิวเมือง</li>
+						    								   					</ul></td><td style="width:200px" valign="top"><ul class="normallist">
+	       				    	<li>สวน/วิวสวนธรรมชาติ</li>
+						    																																							</ul>
+		</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	
+
+
+
+				<tr>
+	<th>สิ่งอำนวยความสะดวก:</th>
+	<td>
+			<table cellspacing="0" cellpadding="0" class="detailtable">
+	<tr>
+	<td style="width:200px" valign="top">
+	<ul class="normallist">
+							   		    	<li>ที่จอดรถ</li>
+	    							   		    	<li>กล้องวงจรปิด</li>
+	    							   				</ul></td><td style="width:200px" valign="top"><ul class="normallist">
+       			    	<li>ฟิตเนส</li>
+	    							   		    	<li>รักษาความปลอดภัย 24 ชม.</li>
+	    							   				</ul></td><td style="width:200px" valign="top"><ul class="normallist">
+       			    	<li>สระว่ายน้ำ</li>
+	    		</ul>
+	</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+
+				</table>
+			</div>
+		</div>
+		
+		<!-- Description -->
+				<div class="box630">
+			<div class="box630_title">
+				<h2>รายละเอียดเพิ่มเติม</h2>
+			</div>
+			<div class="box630_description">
+				<div id="ldescription" style="word-wrap: break-word;" class="goog-trans-section">
+					                                                    ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล้าน ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล้าน
+<br/>ห้องเเต่งครบ พร้อมอยู่ พื้นที่ 31 ตรม. ห้องมุม ชั้น 7 ประกอบด้วย 1 ห้องนอน 1 เตียงนอนมี แถมตู้เสื้อผ้า ในห้องนอน , 1 ห้องน้ำ 1 เเยกโชนเปียกโซนเเห้ง ห้องนั่งเล่น และครัว Build-In
+<br/>ฟรี สันทนาการ มีสระว่ายน้ำ, ฟิตเนส, ห้องสมุด, เครื่องซักผ้าหยอดเหรียญเอง, สวนหย่อม, คีย์การ์ดขึ้นตึก, รปภ24ชั่วโมง,CCTV 
+<br/>
+<br/>อุปกรณ์ในห้องประกอบด้วย 
+<br/>เตียง 5 ฟุต, ตู้เสื้อผ้า เตียงห้องนอน โซฟา (ผ้าม่านทั้งห้องนอน ห้องรับแขก)
+<br/>เครื่องใช้ไฟฟ้า มีแอร์ห้องนอน, ทีวี 
+<br/>
+<br/>สถานที่ใกล้เคียง
+<br/>-	Super market / 7-11 
+<br/>-	ใกล้สำนักงานใหญ่กสิกร ใกล้การไฟฟ้านครหลวง 
+<br/>-	ใกล้โรพยาบาล 
+<br/>-	เดินทางสะดวก มีรถประจำทางผ่านตลอด 
+<br/>ข้อดีๆอื่นๆ 
+<br/>-   ห้องนี้เป็นห้องมุม อีกฝั่งไม่ติดกับใคร เป็นส่วนตัวสุดๆ
+<br/>-   แยกห้องนอนห้องรับแขกชัดเจนเป็นสัดเป็นส่วน
+<br/>-   วิวเเม่น้ำเจ้าพระยา
+<br/> ** ค่าธรรมเนียมโอน จ่ายคนละครึ่งครับ **
+<br/>โทรมาก่อนมีสิทธิ์ก่อนนะครับ 
+<br/>ติดต่อ คุณชาน  Tel 0867259098 Line ID: Asikab  mail chanwitpwk@hotmail.com 
+<br/>***งดรับนายหน้านะครับ ***
+                                                               
+                                        
+				</div>
+			</div>
+		</div>
+			 
+				<!--// Mortgage Calculator//-->
+			<div class="box630">
+				<div class="box630_description" style="margin: 7px 5px;">
+					<iframe src="/mortgage/calculator-widget?region=th&language=th&propertyType=residential&country=th&location=calculator&source=web&listingid=2151449" frameborder="0" width="600" height="379" scrolling="no"></iframe>
+				</div>
+			</div>
+		<!--//end: Mortgage Calculator//-->
+                
+                
+                    <script>
+                      function removeAskingPriceWidget(event)
+                        {     
+                          if (event.data == "removeAskingPriceWidget") {
+                            $('.price-history-widget').css({display: 'none'});
+                          }
+                        }
+                        function removeSmartSelectWidget(event)
+                        {     
+                          if (event.data == "removeSmartSelectWidget") {
+                            $('.smartselect-widget').css({display: 'none'});
+                          }
+                        }
+                    </script>
+                 
+         
+                <script type="text/javascript">
+                   window.addEventListener("message", removeAskingPriceWidget, false);
+                   window.addEventListener("message", removeSmartSelectWidget, false);
+                   window.addEventListener("message", function(event) {                     
+                        if (event.data == "showNearbySmartselectWidget") {
+                           var nearbyURL = "/agent/1480853-chanwit-chokbundit#agent_listings";
+                           window.location.href = nearbyURL;
+                        } else if(event.data == "enquireSmartselectWidget"){
+                           window.location.href = '#contact_agent';
+                        } else if(event.data == "shortlistSmartselectWidget"){
+                            addShortlist(2151449);
+                        }                        
+                      });
+               </script>
+
+                                                                    <!--// Price History Widget//-->
+                        <div class="box630 price-history-widget">
+				<div class="box630_description" style="margin: 7px 5px;">
+					<iframe src="/data-widget/asking-price-index?listingId=2151449" frameborder="0" width="600" height="379" scrolling="no"></iframe>
+				</div>
+			</div>
+		<!--//end: Price History Widget//--> 
+                               
+                <!--// SmartSelect thailand//-->
+                        <div class="box630 smartselect-widget">
+				<div class="box630_description" style="margin: 7px 5px;">
+					<iframe src="/data-widget/smartselect?listingId=2151449" frameborder="0" width="600" height="510" scrolling="no"></iframe>
+				</div>
+			</div>
+		<!--//end: SmartSelect thailand//-->
+                
+				<!-- contact details -->
+		<div class="box630">
+			<div class="box630_title">
+				<h2>ติดต่อเจ้าของประกาศ</h2>
+			</div>
+			<div class="box630_description">
+				<a name="contact_agent"></a>
+						
+
+
+<script>
+
+ function toggle_chks(value) {
+	if (value){
+		$("#news_options_container").show();
+		$("#news_default").attr('checked',1);
+	} else {
+		$("#news_options_container").hide();
+	}
+}
+
+ </script>
+
+
+
+<form id="contactform" name="contactform" class="f-wrap" method="post" action="">
+						<input type="hidden" name="id" value="2151449"/>
+				
+		
+
+	<fieldset>
+	
+						
+					<label for="reason">												<b><span class="req">*</span>ฉันต้องการให้ตัวแทนติดต่อกลับ, เนื่องจาก</b>
+										    <select name="contact_reason">
+					<option value="VIEW">ฉันต้องการเข้าชม</option>
+<option value="INFO">ฉันต้องการข้อมูลเพิ่มเติม</option>
+<option value="SIMI">ฉันมีที่ๆ คล้ายกันสำหรับเช่าหรือขาย</option>
+<option value="OTHER">ฉันมีคำถามอื่นๆ อีก</option>
+
+	            </select>
+		    </label>
+			
+	    
+		<label for="contact_title">		<b><span class="req">*</span>คำนำหน้า</b>
+			<select name="contact_title">
+				<option value="">[เลือก]</option>
+							    <option value="Mr.">นาย</option>
+<option value="Mrs.">นาง</option>
+<option value="Ms.">นางสาว</option>
+
+			</select>
+	    </label>
+
+		<label for="contact_name">		<b><span class="req">*</span>ชื่อ - นามสกุล</b>
+		    <input type="text" name="contact_name" maxlength="40" id="contact_name" value=""/>
+	    </label>
+	    
+		<label for="contact_telephone">		<b><span class="req">*</span>เบอร์โทรศัพท์ของฉัน<br/>(ต้องการการติดต่อกลับ)</b>
+		    <input type="text" name="contact_telephone" maxlength="40" id="contact_telephone" value=""/>
+	    </label>
+	    
+		<label for="contact_email">		<b><span class="req">*</span>อีเมลของฉัน</b>
+		    <input type="text" name="contact_email" maxlength="40" id="contact_email" value=""/>
+	    </label>
+		
+			<!-- hide for DD
+		<label for="contact_method">		<b>ฉันต้องการการที่จะได้รับการติดต่อโดย (ไม่จำเป็น)</b>
+		    <select name="contact_method" style="width:140px">
+				<option value="ANY">โทรศัพท์หรืออีเมล</option>
+<option value="PHONE">โทรศัพท์</option>
+<option value="EMAIL">อีเมล์</option>
+
+            </select>
+	    </label>
+
+		<label for="contact_time">		<b>เวลาที่สามารถติดต่อฉันได้ (ไม่จำเป็น)</b>
+		    <select name="contact_time" style="width:140px">
+				<option value="ANY">ตลอดเวลา</option>
+<option value="MOR">ช่วงเช้า</option>
+<option value="AFT">ช่วงบ่าย</option>
+<option value="EVE">ช่วงเย็น</option>
+<option value="WEND">วันหยุดสุดสัปดาห์</option>
+
+            </select>
+	    </label>
+		-->
+			<!-- hide for DD
+		<label for="contact_location">		<b><span class="req">*</span>ฉันอาศัยอยู่ในประเทศ</b>
+		    <select name="contact_location" style="width:140px">
+		    	<option value="">[เลือก]</option>
+		    	<option value="th">ประเทศไทย</option>
+		    					<option value="af">อัฟกานิสถาน</option>
+<option value="al">อัลบาเนีย</option>
+<option value="dz">แอลจีเรีย</option>
+<option value="ad">อันดอร์รา</option>
+<option value="ao">แองโกลา</option>
+<option value="ar">อาร์เจนตินา</option>
+<option value="am">อาร์เมเนีย</option>
+<option value="au">ออสเตรเลีย</option>
+<option value="at">ออสเตรีย</option>
+<option value="az">อาเซอร์ไบจาน</option>
+<option value="bs">บาฮามาส</option>
+<option value="bh">บาห์เรน</option>
+<option value="bd">บังกลาเทศ</option>
+<option value="bb">บาร์เบโดส</option>
+<option value="by">เบลารุส</option>
+<option value="be">เบลเยียม</option>
+<option value="bz">เบลีซ</option>
+<option value="bj">เบนิน</option>
+<option value="bt">ภูฏาน</option>
+<option value="bo">โบลิเวีย</option>
+<option value="ba">บอสเนียและเฮอร์เซโกวีนา</option>
+<option value="bw">บอตสวานา</option>
+<option value="br">บราซิล</option>
+<option value="bn">เนการาบรูไนดารุสซาลาม</option>
+<option value="bg">บัลแกเรีย</option>
+<option value="bf">บูร์กินาฟาโซ</option>
+<option value="bi">บุรุนดี</option>
+<option value="kh">กัมพูชา</option>
+<option value="cm">แคเมอรูน</option>
+<option value="ca">แคนาดา</option>
+<option value="td">ชาด</option>
+<option value="cl">ชิลี</option>
+<option value="cn">ประเทศจีน</option>
+<option value="co">โคลอมเบีย</option>
+<option value="km">คอโมโรส</option>
+<option value="cg">คองโก</option>
+<option value="cr">คอสตาริกา</option>
+<option value="ci">ไอวอรีโคสต์</option>
+<option value="hr">โครเอเชีย</option>
+<option value="cu">คิวบา</option>
+<option value="cy">ไซปรัสเหนือ</option>
+<option value="cz">สาธารณรัฐเช็ก</option>
+<option value="dk">เดนมาร์ก</option>
+<option value="dj">จิบูตี</option>
+<option value="do">สาธารณรัฐโดมินิกัน</option>
+<option value="tp">ติมอลตะวันออก</option>
+<option value="ec">เอกวาดอร์</option>
+<option value="eg">อียิปต์</option>
+<option value="sv">เอลซัลวาดอร์</option>
+<option value="er">เอริเทรีย</option>
+<option value="ee">เอสโตเนีย</option>
+<option value="et">เอธิโอเปีย</option>
+<option value="fj">ฟิจิ</option>
+<option value="fi">ฟินแลนด์</option>
+<option value="fr">ฝรั่งเศส</option>
+<option value="ga">กาบอง</option>
+<option value="gm">แกมเบีย</option>
+<option value="ge">จอร์เจีย</option>
+<option value="de">เยอรมนี</option>
+<option value="gh">กานา</option>
+<option value="gr">กรีซ</option>
+<option value="gt">กัวเตมาลา</option>
+<option value="gn">กินี</option>
+<option value="ht">เฮติ</option>
+<option value="hn">ฮอนดูรัส</option>
+<option value="hk">ฮ่องกง</option>
+<option value="hu">ฮังการี</option>
+<option value="is">ไอซ์แลนด์</option>
+<option value="in">อินเดีย</option>
+<option value="id">อินโดนิเชีย</option>
+<option value="ir">อิหร่าน</option>
+<option value="iq">อิรัก</option>
+<option value="ie">ไอร์แลนด์</option>
+<option value="il">อิสราเอล</option>
+<option value="it">อิตาลี</option>
+<option value="jm">จาเมกา</option>
+<option value="jp">ญี่ปุ่น</option>
+<option value="jo">จอร์แดน</option>
+<option value="kz">คาซัคสถาน</option>
+<option value="ke">เคนย่า</option>
+<option value="cf">คองโก</option>
+<option value="kp">เกาหลีเหนือ</option>
+<option value="kr">เกาหลีใต้</option>
+<option value="kw">คูเวต</option>
+<option value="kg">คีร์กีซสถาน</option>
+<option value="la">สาธารณรัฐประชาธิปไตยประชาชนลาว</option>
+<option value="lv">ลัตเวีย</option>
+<option value="lb">เลบานอน</option>
+<option value="lr">ไลบีเรีย</option>
+<option value="ly">ลิเบีย</option>
+<option value="li">ลิกเตนสไตน์</option>
+<option value="lt">ลิทัวเนีย</option>
+<option value="lu">ลักเซมเบิร์ก</option>
+<option value="mo">มาเก๊า</option>
+<option value="mk">มาซิโดเนีย</option>
+<option value="mg">มาดากัสการ์</option>
+<option value="mw">มาลาวี</option>
+<option value="my">มาเลเซีย</option>
+<option value="ml">มาลี</option>
+<option value="mt">มอลตา</option>
+<option value="mr">มอริเตเนีย</option>
+<option value="mu">มอริเชียส</option>
+<option value="mx">เม็กซิโก</option>
+<option value="md">มอลโดวา</option>
+<option value="mc">โมนาโก</option>
+<option value="mn">มองโกเลีย</option>
+<option value="ma">โมร็อกโก</option>
+<option value="mz">โมซัมบิก</option>
+<option value="mm"> พม่า</option>
+<option value="na">นามิเบีย</option>
+<option value="np">เนปาล</option>
+<option value="nl">เนเธอร์แลนด์</option>
+<option value="nc">นิวแคลิโดเนีย</option>
+<option value="nz">นิวซีแลนด์</option>
+<option value="ni">นิการากัว</option>
+<option value="ne">ไนเจอร์</option>
+<option value="ng">ไนจีเรีย</option>
+<option value="no">นอร์เวย์</option>
+<option value="om">โอมาน</option>
+<option value="pk">ปากีสถาน</option>
+<option value="pa">ปานามา</option>
+<option value="pg">ปาปัวนิวกินี</option>
+<option value="py">ปารากวัย</option>
+<option value="pe">เปรู</option>
+<option value="ph">ฟิลิปปินส์</option>
+<option value="pl">โปแลนด์</option>
+<option value="pt">โปรตุเกส</option>
+<option value="pr">เปอร์โตริโก</option>
+<option value="qa">กาตาร์</option>
+<option value="ro">โรมาเนีย</option>
+<option value="ru">รัสเซีย</option>
+<option value="rw">รวันดา</option>
+<option value="ws">ซามัว</option>
+<option value="sm">ซานมารีโน</option>
+<option value="sa">ซาอุดีอาระเบีย</option>
+<option value="sn">เซเนกัล</option>
+<option value="sl">เซียร์ราลีโอน</option>
+<option value="sg">สิงคโปร์</option>
+<option value="sk">สโลวเกีย</option>
+<option value="si">สโลวีเนีย</option>
+<option value="so">โซมาเลีย</option>
+<option value="za">แอฟริกาใต้</option>
+<option value="es">สเปน</option>
+<option value="lk">ศรีลังกา</option>
+<option value="sd">ซูดาน</option>
+<option value="sr">ซูรินาเม</option>
+<option value="sz">สวาซิแลนด์</option>
+<option value="se">สวีเดน</option>
+<option value="ch">สวิตเซอร์แลนด์</option>
+<option value="sy">ซีเรีย</option>
+<option value="tw">ไต้หวัน</option>
+<option value="tj">ทาจิกิสถาน</option>
+<option value="tz">แทนซาเนีย</option>
+<option value="th">ประเทศไทย</option>
+<option value="tg">โตโก</option>
+<option value="tn">ตูนิเซีย</option>
+<option value="tr">ตุรกี</option>
+<option value="tm">เติร์กเมนิสถาน</option>
+<option value="ug">ยูกันดา</option>
+<option value="ua">ยูเครน</option>
+<option value="ae">สหรัฐอาหรับเอมิเรตส์</option>
+<option value="gb">สหราชอาณาจักร</option>
+<option value="us">สหรัฐอเมริกา</option>
+<option value="uy">อุรุกวัย</option>
+<option value="uz">อุซเบกิสถาน</option>
+<option value="ve">เวเนซุเอลา</option>
+<option value="vn">เวียดนาม</option>
+<option value="ye">เยเมน</option>
+<option value="yu">ยูโกสลาเวีย</option>
+<option value="zm">แซมเบีย</option>
+<option value="zw">ซิมบับเว</option>
+<option value="ot">อื่นๆ</option>
+
+            </select>
+	    </label>
+		-->
+		<label for="contact_message">		<b>ฉันมีคำถามเพิ่มเติม</b>
+		    <textarea name="contact_message" rows="4" id="contact_message"></textarea>
+	    </label>
+		
+					<div class="f-checkbox">
+			<input name="communication_us" type="checkbox" value="1" checked="1"> กรุณาแจ้งฉันเมื่อมีการอัพเดตข้อเสนอจากพาร์ทเนอร์ทางจดหมายข่าวรายเดือน
+			</div>
+				
+		
+		
+					<div class="f-checkbox">
+				<input name="toggle_news" type="checkbox"  onclick="toggle_chks($(this).is(':checked'))" value="1" 	> สมัครสมาชิกเพื่อรับข่าวสารที่ให้บริการ รับข่าวสารรายวัน, ทุกวันจันทร์-วันศุกร์ เวลา 14.00 น.
+			</div>
+					<div id ="news_options_container" style="display:none" class="left20">
+			<div class="f-checkbox">
+					<input id="news_default" name="news_subscription" type="radio" value="1" > รับข่าวสารรายวัน, ทุกวันจันทร์-วันศุกร์ เวลา 14.00 น.
+				</div>
+				<div class="f-checkbox">
+					<input name="news_subscription" type="radio" value="2" > รับสรุปข่าวเป็นรายสัปดาห์ ทุกวันศุกร์เวลา 14.00 น.
+				</div>
+			</div>
+		
+				
+		<div class="buttons">
+							<input class="btnbluesmall" id="btnbluesmall" type="submit" name="submit" value="ส่งข้อความ" onclick="_gaq.push(['_trackEvent', 'Listing', 'Contact', 'Bottom']);"/><div class="btnbluesmallEnding"></div>
+					</div>
+		
+	</fieldset>
+</form>
+
+			</div>
+		</div>
+        
+
+		<div class="box630">
+			<div class="padding10">
+				<span class="greytext"><i>ขอปฏิเสธความรับผิดชอบ: ผู้ลงประกาศโฆษณาจะต้องเป็นผู้รับผิดชอบในข้อความ รูปภาพ รวมถึงรายละเอียดทั้งหมดของโฆษณา</i></span>
+			</div>
+		</div>
+		
+		
+	    </div><!-- end of homeleft -->
+
+    <div id="homeright">
+    	    	<!--  banner mpu -->
+				
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<div id='ddproperty_thai_proplisting_showcase_1'>
+    <script type='text/javascript'>
+    googletag.display('ddproperty_thai_proplisting_showcase_1');
+    </script>
+</div>
+<div class='clearboth top10'></div>
+
+
+
+
+				
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<div id='ddproperty_thai_proplisting_showcase_2'>
+    <script type='text/javascript'>
+    googletag.display('ddproperty_thai_proplisting_showcase_2');
+    </script>
+</div>
+<div class='clearboth top10'></div>
+
+
+
+
+		
+		
+				<!--graybox begin-->
+		<div class="box300">
+			<div class="head300">
+				    <h2>อสังหาฯ ที่อยู่ใกล้บริเวณของโครงการนี้</h2>
+			</div>
+			<div class="body300">
+													
+									  														
+																
+			 <div class="floatleft" style="width:80px">
+			 			 <a href="/property/ห้องให้เช่า-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคา-850-2151494" target="_blank"><img src="http://th1-cdn.pgimgs.com/listing/2151494/UPHO.13704431.V75B.jpg" alt="UPHO.13704431.V75B" class="thumbnail" /></a>
+			 			 </div>
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 <a href="/property/ห้องให้เช่า-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคา-850-2151494" target="_blank" class="bluelink">
+			 ห้องให้เช่า คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคา...
+			 </a><br/>
+			  6/1 ราษฏร์บูรณะ, 10140 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			สำหรับเช่า - ฿ 8,500			 </div>
+	
+			 <div class="sepdot top5"></div>
+											
+									  														
+																
+			 <div class="floatleft" style="width:80px">
+			 			 <a href="/property/คอนโดให้เช่า-lumpini-ville-ราษฎรบูรณะ-2151503" target="_blank"><img src="http://th1-cdn.pgimgs.com/property/632/PPHO.1681328.V75B.jpg" alt="PPHO.1681328.V75B" class="thumbnail" /></a>
+			 			 </div>
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 <a href="/property/คอนโดให้เช่า-lumpini-ville-ราษฎรบูรณะ-2151503" target="_blank" class="bluelink">
+			 คอนโดให้เช่า Lumpini Ville ราษฎรบูรณะ
+			 </a><br/>
+			  6/1 ราษฏร์บูรณะ, 10140 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			สำหรับเช่า - ฿ 7,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+	
+            <div class="alignright top5">
+                <a class="redthinlink" href="/project-listings/632-lumpini-ville-ราษฎร์บูรณะ-ริเวอร์วิว/listing" target="_blank">รายการอื่นๆ</a>&nbsp;<img height="7" alt="redarrow" src="/images/ps/redarrow.gif">
+            </div>
+
+		</div>
+	</div>
+
+		
+								
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<div class="clearboth"></div>
+	<div id='ddproperty_thai_proplisting_showcase_3'>
+    <script type='text/javascript'>
+    googletag.display('ddproperty_thai_proplisting_showcase_3');
+    </script>
+</div>
+<div class='clearboth top10'></div>
+
+	
+
+
+				
+				<!--graybox begin-->
+		<div class="box300">
+			<div class="head300">
+				
+				<h2>ประกาศใกล้เคียง</h2>
+				
+			</div>
+			<div class="body300">
+																  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ขายถูกมากๆ-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคาเพียง-2151449"><img src="http://th2-cdn.pgimgs.com/listing/2151449/UPHO.13704089.V75B.jpg" alt="UPHO.13704089.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ขายถูกมากๆ-คอนโด-ลุมพินี-วิว-ราษฎร์บูรณะ-ราคาเพียง-2151449" class="bluelink" title="ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ ราคาเพียง  1.6 ล ถูกสุดๆ 31 ตรม ห้องมุม ลดจาก 1.8 ล">ขายถูกมากๆ  คอนโด ลุมพินี วิว ราษฎร์บูรณะ...</a><br/>
+
+			 6/1 ราษฏร์บูรณะ, 10140 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 1,600,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ขายคอนโดแชปเตอร์วัน-ห้อง-riverfront-2072642"><img src="http://th1-cdn.pgimgs.com/listing/2072642/UPHO.13088996.V75B.jpg" alt="UPHO.13088996.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ขายคอนโดแชปเตอร์วัน-ห้อง-riverfront-2072642" class="bluelink" title="ขายคอนโดแชปเตอร์วัน ห้อง riverfront">ขายคอนโดแชปเตอร์วัน ห้อง riverfront</a><br/>
+
+			 ถนน ราษฎร์บูรณะ, 10120 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 5,650,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ขายคอนโดแชปเตอร์วัน-ราษฎร์บูรณะ-33-ขนาด-29-ตร-ตกแต-2151275"><img src="http://th2-cdn.pgimgs.com/listing/2151275/UPHO.13702829.V75B.jpg" alt="UPHO.13702829.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ขายคอนโดแชปเตอร์วัน-ราษฎร์บูรณะ-33-ขนาด-29-ตร-ตกแต-2151275" class="bluelink" title="ขายคอนโดแชปเตอร์วัน ราษฎร์บูรณะ 33 ขนาด 29 ตร ตกแต่งใหม่หมดสวย">ขายคอนโดแชปเตอร์วัน ราษฎร์บูรณะ 33 ขนาด 29 ตร...</a><br/>
+
+			 ถนน ราษฎร์บูรณะ, 10120 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 2,200,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ขายคอนโดแชปเตอร์วัน-ริมแม่น้ำเจ้าพระยา-ขนาด-60-ตร-2068025"><img src="http://th2-cdn.pgimgs.com/listing/2068025/UPHO.13054595.V75B.jpg" alt="UPHO.13054595.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ขายคอนโดแชปเตอร์วัน-ริมแม่น้ำเจ้าพระยา-ขนาด-60-ตร-2068025" class="bluelink" title="ขายคอนโดแชปเตอร์วัน ริมแม่น้ำเจ้าพระยา ขนาด 60 ตร.ม">ขายคอนโดแชปเตอร์วัน ริมแม่น้ำเจ้าพระยา ขนาด 60...</a><br/>
+
+			 ราษฎร์บูรณะ, 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 3,700,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ายคอนโด-ไอวี่ริเวอร์-โครงการติดถนนราษฎร์บูรณะ-วิวต-1337306"><img src="http://th1-cdn.pgimgs.com/listing/1337306/UPHO.7725296.V75B.jpg" alt="UPHO.7725296.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ายคอนโด-ไอวี่ริเวอร์-โครงการติดถนนราษฎร์บูรณะ-วิวต-1337306" class="bluelink" title="ายคอนโด ไอวี่ริเวอร์ โครงการติดถนนราษฎร์บูรณะ วิวตึกเห็นแม่น้ำ">ายคอนโด ไอวี่ริเวอร์ โครงการติดถนนราษฎร์บูรณะ...</a><br/>
+
+			 ราษฎร์บูรณะ, 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 2,450,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ขาย-คอนโด-ไอวี่-ราษฎร์บูรณะ-ใกล้-bts-วงเวียนใหญ่-ร-1995794"><img src="http://th1-cdn.pgimgs.com/property/701/PPHO.1682765.V75B.jpg" alt="PPHO.1682765.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ขาย-คอนโด-ไอวี่-ราษฎร์บูรณะ-ใกล้-bts-วงเวียนใหญ่-ร-1995794" class="bluelink" title="ขาย คอนโด ไอวี่ ราษฎร์บูรณะ ใกล้ BTS วงเวียนใหญ่ ระเบียงวิวแม่น้ำเจ้าพระยาสวยมาก ชั้น26">ขาย คอนโด ไอวี่ ราษฎร์บูรณะ ใกล้ BTS...</a><br/>
+
+			 เจริญนคร, 10140 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 2,200,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ขายด่วนคอนโดไอวี่-ริเวอร์-ราษฎร์บูรณะ15-2160950"><img src="http://th1-cdn.pgimgs.com/listing/2160950/UPHO.13787387.V75B.jpg" alt="UPHO.13787387.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ขายด่วนคอนโดไอวี่-ริเวอร์-ราษฎร์บูรณะ15-2160950" class="bluelink" title="ขายด่วนคอนโดไอวี่ ริเวอร์   ราษฎร์บูรณะ15">ขายด่วนคอนโดไอวี่ ริเวอร์   ราษฎร์บูรณะ15</a><br/>
+
+			 ราษฎร์บูรณะ, 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 3,200,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+														  								
+														
+											 
+	 <div class="floatleft" style="width:80px">
+	 		 <a href="/property/ถูกที่สุดในโครงการ-ไอวี่ริเวอร์-ราษฎร์บูรณะ-ห้องมุ-2089046"><img src="http://th1-cdn.pgimgs.com/property/701/PPHO.1682765.V75B.jpg" alt="PPHO.1682765.V75B" class="thumbnail" /></a>
+	 	 </div>
+
+
+			 <div class="floatleft left5 right5" style="width:180px">
+			 
+	<a href="/property/ถูกที่สุดในโครงการ-ไอวี่ริเวอร์-ราษฎร์บูรณะ-ห้องมุ-2089046" class="bluelink" title="ถูกที่สุดในโครงการ ไอวี่ริเวอร์-ราษฎร์บูรณะ (ห้องมุมผนังห้องไม่ติดใคร ขนาด 36 ตรม. ชั้น17 ตึกA  วิวแม่น้ำ และ เมือง) ราคาพิเศษ 2.1 ล้าน ด่วนสุดๆๆ">ถูกที่สุดในโครงการ ไอวี่ริเวอร์-ราษฎร์บูรณะ...</a><br/>
+
+			 เจริญนคร, 10140 									ราษฎร์บูรณะ, 			กรุงเทพ			<br/>
+			ขาย - ฿ 2,100,000			 </div>
+	
+			 <div class="sepdot top5"></div>
+				
+            <div class="alignright top5">
+                <a class="redthinlink" href="/รวมประกาศขาย?distance=5&center_lat=&center_long=&latitude=&longitude=" target="_blank">
+					รายการอื่นๆ
+				</a>&nbsp;<img height="7" alt="redarrow" src="/images/ps/redarrow.gif">
+            </div>
+		</div>
+	</div>
+
+		
+				
+				
+
+
+				
+    
+
+		
+		        
+    </div><!-- end of homeright -->
+
+	<div class="clearboth"></div>
+
+
+
+<script>
+function googleSectionalElementInit() {
+    new google.translate.SectionalElement({
+        sectionalNodeClassName: 'goog-trans-section',
+        controlNodeClassName: 'goog-trans-control',
+        background: '#f4fa58'
+    }, 'google_sectional_element');
+}
+</script>
+<script id="translatescript" type="text/javascript">
+(function() {
+    var translatescript = document.createElement('script');
+    translatescript.type = 'text/javascript';
+    translatescript.src = ('//translate.google.com/translate_a/element.js?cb=googleSectionalElementInit&ug=section&hl=en');
+    var s = document.getElementById('translatescript');
+    s.parentNode.insertBefore(translatescript, s);
+})();
+</script>
+
+	
+		<div class="clearboth top10"></div>
+		<div style="margin:0 auto;width:728px;">
+
+
+		    <!-- GOOGLE AD MANAGER -->
+		    				
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+	<div id='ddproperty_thai_proplisting_bottom_leaderboard'>
+    <script type='text/javascript'>
+    googletag.display('ddproperty_thai_proplisting_bottom_leaderboard');
+    </script>
+</div>
+
+	
+
+		    
+		</div>
+		</div>
+	</div>
+
+    <div id="footer">
+
+		<div id="footer_toprow">
+			<a class="footer_homebtn" href="/">&nbsp;</a>
+
+			
+<div class="floatleft left10 top5">DDproperty.com - เว็บอสังหาฯ อันดับ 1 ของเมืองไทย</div>
+
+
+			<div class="clearboth"></div>
+		</div>
+
+        <div id="footer_main">
+			<div class="row1">
+				
+	<div class="group">
+	<b>อสังหาฯ สำหรับขาย</a></b>
+	<a href="/ขายคอนโด" class="greythinlink" title="ขายคอนโด">ขายคอนโด</a><br />
+	<a href="/ขายบ้านเดี่ยว" class="greythinlink" title="ขายบ้าน">ขายบ้าน</a><br />
+	<a href="/ขายทาวน์เฮ้าส์" class="greythinlink" title="ขายทาวน์เฮ้าส์ / ทาวน์โฮม">ขายทาวน์เฮ้าส์</a><br />
+	<a href="/ขายที่ดิน" class="greythinlink" title="ขายที่ดิน">ขายที่ดิน</a><br />
+	<a href="/ขายตึกแถว-อาคารพาณิชย์" class="greythinlink" title="ขายตึกแถว-อาคารพาณิชย์">ขายตึกแถว-อาคารพาณิชย์</a><br />
+	</div>
+
+	<div class="group">
+	<b>อสังหาฯ สำหรับเช่า</a></b>
+	<a href="/เช่าคอนโด" class="greythinlink" title="คอนโดให้เช่า">คอนโดให้เช่า</a><br />
+	<a href="/บ้านเช่า" class="greythinlink" title="บ้านเดี่ยวให้เช่า">บ้านเดี่ยวให้เช่า</a><br />
+	<a href="/เช่าทาวน์เฮ้าส์" class="greythinlink" title="ทาวน์เฮ้าส์ให้เช่า">ทาวน์เฮ้าส์ให้เช่า</a><br />
+	<a href="/เช่าที่ดิน" class="greythinlink" title="เช่าที่ดิน">เช่าที่ดิน</a><br />
+	<a href="/เช่าอพาร์ทเมนท์" class="greythinlink" title="อพาร์ทเม้นท์ หอพัก ให้เช่า">อพาร์ทเม้นท์ หอพัก ให้เช่า</a><br />
+	<a href="/เช่าสำนักงาน" class="greythinlink" title="ออฟฟิศ สำนักงาน ให้เช่า">ออฟฟิศ สำนักงาน ให้เช่า</a><br />
+	</div>
+
+			<div class="group">
+	<b>ทำเลน่าสนใจ</b>
+	<a href="/ย่าน/6610022-sukhumvit-siam-rajdamri-chidlom-ploenchit-asoke-th" class="greythinlink" title="ประกาศขาย / ให้เช่า ในทำเล สุขุมวิท">สุขุมวิท</a><br />
+	<a href="/ย่าน/6610008-ratchadapisek-rama-9-new-petchburi-huai-khwang" class="greythinlink" title="ประกาศขาย / ให้เช่า ในทำเล พระราม 9 - รัชดา - รัชดาภิเษก" >พระราม 9 - รัชดาภิเษก</a><br />
+	<a href="/เชียงใหม่" class="greythinlink" title="ประกาศขาย / ให้เช่า ใน จ.เชียงใหม่">เชียงใหม่</a><br />
+	<a href="/พัทยา" class="greythinlink" title="ประกาศขาย / ให้เช่า ใน จ.พัทยา">พัทยา</a><br />
+	<a href="/ภูเก็ต" class="greythinlink" title="ประกาศขาย / ให้เช่า ใน จ.ภูเก็ต">ภูเก็ต</a><br />
+	<a href="/นนทบุรี" class="greythinlink" title="ประกาศขาย / ให้เช่า ใน จ.นนทบุรี">นนทบุรี</a><br />
+	<a href="/ปทุมธานี" class="greythinlink" title="ประกาศขาย / ให้เช่า ใน จ.ปทุมธานี">ปทุมธานี</a><br />
+	</div>
+
+	<div class="group">
+	<b>การลงทุน</b>
+	<a href="/รวมโครงการใหม่" class="greythinlink" title="บ้าน บ้านจัดสรร คอนโด โครงการใหม่">บ้าน คอนโด โครงการใหม่</a><br />
+	<a href="/อสังหาริมทรัพย์ในต่างประเทศ" class="greythinlink" title="อสังหาริมทรัพย์ในต่างประเทศ เพื่อการลงทุน">อสังหาริมทรัพย์ในต่างประเทศ</a><br />
+		<a href="/ขายกิจการ" class="greythinlink" title="ขายกิจการ ธุรกิจ">ขายกิจการ</a><br />
+		</div>
+	
+	<div class="group last">
+	<b>ข่าว-บทความที่น่าสนใจ</b>
+	<a href="/ข่าวอสังหาริมทรัพย์-บทความ" class="greythinlink" title="อัพเดต ข่าวอสังหาริมทรัพย์">ข่าวอสังหาริมทรัพย์</a><br />
+					<a href="/ข่าวอสังหาริมทรัพย์-บทความ/category/FN" class="greythinlink" title="สินเชื่อ-การลงทุน">สินเชื่อ-การลงทุน</a><br />
+	<a href="/ข่าวอสังหาริมทรัพย์-บทความ/category/HD" class="greythinlink" title="ไอเดีย ตกแต่งบ้าน-คอนโด">ไอเดีย ตกแต่งบ้าน-คอนโด</a><br />
+	<a href="/ข่าวอสังหาริมทรัพย์-บทความ/category/HG" class="greythinlink" title="ไลฟ์สไตล์">ไลฟ์สไตล์</a><br />
+	
+	</div>
+	
+	<div class="clearboth top20"></div>
+
+	<div class="group">
+	<b>โครงการจาก Developer</b>
+																						<a href="/โครงการ-คอนโด/ค้นหา/อนันดา%20ดีเวลลอปเม้นท์" class="greythinlink" title="โครงการคอนโด จาก Ananda - อนันดา ดีเวลลอปเม้นท์ จำกัด (มหาชน)">อนันดา</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/เอพี%20(ไทยแลนด์)" class="greythinlink" title="โครงการคอนโด จาก AP - เอพี (ไทยแลนด์) จำกัด (มหาชน)">เอพี</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/อารียาพรอพเพอร์ตี้" class="greythinlink" title="โครงการคอนโด จาก Areeya - อารียาพรอพเพอร์ตี้ จำกัด (มหาชน)">อารียา</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/เจ้าพระยามหานคร" class="greythinlink" title="โครงการคอนโด จาก CMC - เจ้าพระยามหานคร จำกัด (มหาชน)">เจ้าพระยามหานคร</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/แลนด์%20แอนด์%20เฮ้าส์" class="greythinlink" title="โครงการคอนโด จาก Land and Houses (LH) - แลนด์ แอนด์ เฮ้าส์ จำกัด (มหาชน)">แลนด์ แอนด์ เฮ้าส์</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/ลลิล%20พร็อพเพอร์ตี้" class="greythinlink" title="โครงการคอนโด จาก Lalin - ลลิล พร็อพเพอร์ตี้">ลลิล</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/แอล.พี.เอ็น." class="greythinlink" title="โครงการคอนโด จาก LPN - แอล.พี.เอ็น. ดีเวลลอปเมนท์ จำกัด (มหาชน)">แอล.พี.เอ็น.</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/เมเจอร์%20ดีเวลลอปเม้นท์" class="greythinlink" title="โครงการคอนโด จาก Major Development - เมเจอร์ ดีเวลลอปเม้นท์ จำกัด (มหาชน)">เมเจอร์ ดีเวลลอปเม้นท์</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/นารายณ์พร็อพเพอตี้" class="greythinlink" title="โครงการคอนโด จาก Narai Property - นารายณ์พร็อพเพอตี้ จำกัด">นารายณ์พร็อพเพอตี้</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/โนเบิล" class="greythinlink" title="โครงการคอนโด จาก Narai Property - นารายณ์พร็อพเพอตี้ จำกัด">โนเบิล</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/ออริจิ้น" class="greythinlink" title="โครงการคอนโด จาก Origin Property - ออริจิ้น พร็อพเพอร์ตี้ จำกัด">ออริจิ้น พร็อพเพอร์ตี้</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/พร็อพเพอร์ตี้%20เพอร์เฟค" class="greythinlink" title="โครงการคอนโด จาก Property Perfect - พร็อพเพอร์ตี้ เพอร์เฟค จำกัด (มหาชน)">พร็อพเพอร์ตี้ เพอร์เฟค</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/ปริญสิริ" class="greythinlink" title="โครงการคอนโด จาก Prinsiri - ปริญสิริ จำกัด (มหาชน)">ปริญสิริ</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/พฤกษา" class="greythinlink" title="โครงการคอนโด จาก Pruksa - พฤกษา เรียลเอสเตท จำกัด">พฤกษา</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/ควอลิตี้%20เฮ้าส์" class="greythinlink" title="โครงการคอนโด จาก Quality Houses (QH) - ควอลิตี้ เฮ้าส์ จำกัด (มหาชน)">ควอลิตี้ เฮ้าส์</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/ไรมอน%20แลนด์" class="greythinlink" title="โครงการคอนโด จาก Raimon Land - ไรมอน แลนด์ จำกัด (มหาชน)">ไรมอน แลนด์</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/เอสซี%20แอสเสท" class="greythinlink" title="โครงการคอนโด จาก SC ASSET - เอสซี แอสเสท คอร์ปอเรชั่น จำกัด (มหาชน)">เอสซี แอสเสท</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/เสนาดีเวลลอปเม้นท์" class="greythinlink" title="โครงการคอนโด จาก Sena Development - เสนาดีเวลลอปเม้นท์ จำกัด (มหาชน)">เสนาดีเวลลอปเม้นท์</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/แสนสิริ" class="greythinlink" title="โครงการคอนโด จาก SANSIRI - แสนสิริ จำกัด (มหาชน)">แสนสิริ</a><br />
+	<a href="/โครงการ-คอนโด/ค้นหา/ศุภาลัย" class="greythinlink" title="โครงการคอนโด จาก Supalai - ศุภาลัย จำกัด (มหาชน)">ศุภาลัย</a><br />
+		</div>
+
+															<div class="group">
+	<b>คอนโด ใกล้รถไฟฟ้า</b>
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2159&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS อโศก">คอนโด ใกล้ BTS อโศก</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2165&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS ทองหล่อ">คอนโด ใกล้ BTS ทองหล่อ</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2168&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS เอกมัย">คอนโด ใกล้ BTS เอกมัย</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2171&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS พระโขนง">คอนโด ใกล้ BTS พระโขนง</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2174&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS อ่อนนุช">คอนโด ใกล้ BTS อ่อนนุช</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2183&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS อุดมสุข">คอนโด ใกล้ BTS อุดมสุข</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2186&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS บางนา">คอนโด ใกล้ BTS บางนา</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2144&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS พญาไท">คอนโด ใกล้ BTS พญาไท</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2135&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS อารีย์">คอนโด ใกล้ BTS อารีย์</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2132&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS สะพานควาย">คอนโด ใกล้ BTS สะพานควาย</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2108&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS สะพานตากสิน">คอนโด ใกล้ BTS สะพานตากสิน</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2105&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS กรุงธนบุรี">คอนโด ใกล้ BTS กรุงธนบุรี</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2102&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS วงเวียนใหญ่">คอนโด ใกล้ BTS วงเวียนใหญ่</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=BTS&mrt_code=2090&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟฟ้า BTS บางหว้า">คอนโด ใกล้ BTS บางหว้า</a><br />
+	</div>
+
+									<div class="group">
+	<b>คอนโด ใกล้รถไฟใต้ดิน</b>
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2045&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT เพชรบุรี">คอนโด ใกล้ MRT เพชรบุรี</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2084&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย/ให้เช่า ใกล้ รถไฟใต้ดิน MRT พระราม 9">คอนโด ใกล้ MRT พระราม 9</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2081&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT ศูนย์วัฒนธรรม">คอนโด ใกล้ MRT ศูนย์วัฒนธรรม</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2054&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT ห้วยขวาง">คอนโด ใกล้ MRT ห้วยขวาง</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2051&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT สุทธิสาร">คอนโด ใกล้ MRT สุทธิสาร</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2075&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT รัชดาภิเษก">คอนโด ใกล้ MRT รัชดาภิเษก</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2063&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT ลาดพร้าว">คอนโด ใกล้ MRT ลาดพร้าว</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&search_type=district&property_type=N&transportation_type=MRT&mrt_code=2087&distance=1&sort=distance&order=asc" class="greythinlink" title="คอนโดประกาศขาย / ให้เช่า ใกล้ รถไฟใต้ดิน MRT พหลโยธิน">คอนโด ใกล้ MRT พหลโยธิน</a><br />
+	</div>
+
+							
+	<div class="group">
+	<b>ค้นหาคอนโด ตามราคา</b>
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&maxprice=1000000" class="greythinlink" title="คอนโดประกาศขาย ราคาต่ำกว่า 1 ล้านบาท / ขายดาวน์">< 1 ล้านบาท & ขายดาวน์</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&minprice=1000000&maxprice=3000000" class="greythinlink" title="คอนโดประกาศขาย ราคา 1 - 3 ล้านบาท">1 - 3 ล้านบาท</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&minprice=3000000&maxprice=5000000" class="greythinlink" title="คอนโดประกาศขาย ราคา 3 - 5 ล้านบาท">3 - 5 ล้านบาท</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&minprice=5000000&maxprice=7000000" class="greythinlink" title="คอนโดประกาศขาย ราคา 5 - 7 ล้านบาท">5 - 7 ล้านบาท</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&minprice=7000000&maxprice=10000000" class="greythinlink" title="คอนโดประกาศขาย ราคา 7 - 10 ล้านบาท">7 - 10 ล้านบาท</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&minprice=10000000&maxprice=20000000" class="greythinlink" title="คอนโดประกาศขาย ราคา 10 - 20 ล้านบาท">10 - 20 ล้านบาท</a><br />
+	<a href="/รายชื่ออสังหาริมทรัพย์?listing_type=sale&property_type=N&distance=0.5&minprice=20000000" class="greythinlink" title="คอนโดประกาศขาย ราคา 20 ล้านบาท ขึ้นไป">20 ล้านบาท ขึ้นไป</a><br />
+	</div>
+
+	<div class="group last">
+	<b>ลงประกาศ-ติดต่อโฆษณา</b>
+	<a href="/ลงทะเบียน" class="greythinlink" title="สมัครสมาชิก ฟรี!">สมัครสมาชิก ฟรี!</a><br />
+		<a href="/ลงประกาศ" class="greythinlink" title="ลงประกาศ ขาย-ให้เช่า">ลงประกาศ ขาย-ให้เช่า</a><br />
+		<a href="/agents-featured-listings" class="greythinlink" title="ลงประกาศแบบ Exclusive">ลงประกาศแบบ Exclusive</a><br />
+	<a href="/หลักเกณฑ์ในการลงโฆษณา" class="greythinlink" title="หลักเกณฑ์ในการลงโฆษณา">หลักเกณฑ์ในการลงโฆษณา</a><br />
+	<a href="/วิธีการใช้งาน" class="greythinlink" title="วิธีการใช้งาน">วิธีการใช้งาน</a><br />
+	
+	
+	
+	</div>
+
+	<div class="clearboth top20"></div>
+
+	<div class="group">
+	<b>ไดเร็คทอรี่</b>
+	<a href="/โครงการ-คอนโด" class="greythinlink" title="ค้นหา ตามชื่อโครงการ คอนโดมิเนียม">โครงการ คอนโดมิเนียม</a><br />
+	<a href="/นายหน้า" class="greythinlink" title="นายหน้า อสังหาริมทรัพย์">ค้นหาตัวแทน</a><br />
+	<a href="/บริษัทนายหน้า" class="greythinlink" title="บริษัท นายหน้า อสังหาริมทรัพย์">บริษัท นายหน้า อสังหาริมทรัพย์</a><br />
+	<a href="/videos" class="greythinlink" title="รีวิว โครงการใหม่ / งานสัมมนา / อีเวนท์">วีดีโอ</a><br />
+	<a href="/สถานที่ใกล้เคียง" class="greythinlink" title="ค้นหาจากสถานที่ใกล้เคียง">ค้นหาจากสถานที่ใกล้เคียง</a><br />
+	</div>
+
+	<div class="group">
+	<b>คู่มือซื้อขาย</b>
+	    <a href="/ถามกูรู" class="greythinlink" title="ถามกูรู">ถามกูรู</a><br />
+    	<a href="/คู่มือซื้อขาย" class="greythinlink" title="คู่มือการลงทุน">คู่มือการลงทุน</a><br />
+	<a href="/property-mortgages-calculator" class="greythinlink" title="คำนวณสินเชื่อเพื่อที่อยู่อาศัย">คำนวณสินเชื่อเพื่อที่อยู่อาศัย</a><br />
+
+    <br />
+    
+    <b>เครื่องมือ </b>
+            <a href="/tools/property-search" class="greythinlink" title="วิดเจ็ตสำหรับค้นหา">วิดเจ็ตสำหรับค้นหา</a><br />
+    	</div>
+	
+	<div class="group">
+	<b>ข้อมูลบริษัท</b>
+	<a href="/about" class="greythinlink" title="เกี่ยวกับเรา">เกี่ยวกับเรา</a><br />
+	<a href="/ข้อมูลบริษัท" class="greythinlink" title="ติดต่อเรา">ติดต่อเรา</a><br />
+	
+	<a href="http://jobs.propertyguru.com/career/position_type=&specialization_type=-1&country_type=4&position_list_type=-1" class="greythinlink" title="ร่วมงานกับเรา">ร่วมงานกับเรา</a><br />
+	<a href="/นโยบายความเป็นส่วนตัว" class="greythinlink" title=" นโยบายความเป็นส่วนตัว"> นโยบายความเป็นส่วนตัว</a><br />
+	<a href="/ข้อตกลงและเงื่อนไขการใช้บริการเว็บไซต์" class="greythinlink" title="ข้อตกลงและเงื่อนไข">ข้อตกลงและเงื่อนไข</a><br />
+    <a href="/เงื่อนไขการซื้อขาย" class="greythinlink" title="เงื่อนไข และข้อกำหนดของการซื้อขาย">เงื่อนไข และข้อกำหนดของการซื้อขาย</a><br />
+   
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+        $('#feedback_btn_2').click(function() {
+            loadDialog(600,300,'Feedback','/pg_feedback_form');
+        });
+    });
+    </script>
+	<a href="#" rel="nofollow" id="feedback_btn_2" class="greythinlink" title="แนะนำติชม">แนะนำติชม</a><br />
+	</div>
+	<div class="group social">
+
+	<div class="addthis_jumbo_share"></div>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e1ea2f67ec038d1"></script>
+
+	</div>
+		<!--<div class="group">
+
+	<div class="floatleft top50 mright10" style="width:20px">
+		<a href="http://www.facebook.com/DDproperty" class="footer_fb" target="_blank">&nbsp;</a>
+	</div>
+
+	<div class="floatleft top50 mright10" style="width:20px">
+		<a href="http://twitter.com/DDpropertyCom" class="footer_tt" target="_blank">&nbsp;</a>
+	</div>
+			
+	<div class="floatleft top50" style="width:70px"> -->
+	<!-- Place this tag where you want the +1 button to render -->
+	<!--<g:plusone href="http://www.ddproperty.com" size="medium"></g:plusone> -->
+	
+	<!-- Place this render call where appropriate -->
+	<!--<script type="text/javascript">
+	  (function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	</div>
+
+	<div class="clearboth"></div>
+
+	</div>-->
+		<div class="clearboth"></div>
+
+
+			</div>
+
+
+
+			<div class="row2">
+
+				
+	<div class="floatleft">
+		สงวนลิขสิทธิ์ &#169; 2558 Allproperty Media Co., Ltd.<br />
+		
+	</div>
+		
+	<div class="floatright">
+		<div id="flag">
+			เครือข่ายของเรา:<br />
+			<ul>
+				<li><a href="http://www.propertyguru.com.sg" title="สิงคโปร์" id="sg">&nbsp;</a></li>
+				<li><a href="http://www.propertyguru.com.my" title="มาเลเซีย" id="my">&nbsp;</a></li>
+				<li><a href="http://www.rumah.com" title="อินโดนิเชีย" id="id">&nbsp;</a></li>
+				<li><a href="http://www.immobilienscout24.de" title="เยอรมนี" id="de" rel="nofollow" target="_blank">&nbsp;</a></li>
+				<li><a href="http://www.immobilienscout24.at" title="ออสเตรีย" id="at" rel="nofollow" target="_blank">&nbsp;</a></li>
+				<li><a href="http://www.immoscout24.ch" title="สวิตเซอร์แลนด์" id="ch" rel="nofollow" target="_blank">&nbsp;</a></li>
+				<li><a href="http://www.domain.com.au" title="ออสเตรเลีย" id="au" rel="nofollow" target="_blank">&nbsp;</a></li>
+				<li><a href="http://www.soufun.com" title="ประเทศจีน" id="cn" rel="nofollow" target="_blank">&nbsp;</a></li>
+				<li><a href="http://www.28hse.com" title="ฮ่องกง" id="hk" target="_blank">&nbsp;</a></li>
+				<li><a href="http://www.99acres.com" title="อินเดีย" id="in" rel="nofollow" target="_blank" >&nbsp;</a></li>
+				<li><a href="http://batdongsan.com.vn" title="เวียดนาม" id="vn" target="_blank" >&nbsp;</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clearboth"></div>
+
+
+				<script type="text/javascript"> page="index";</script>
+<script type="text/javascript" src="http://hits.truehits.in.th/data/n0025521.js"></script>
+
+<!-- BEGIN EFFECTIVE MEASURE CODE -->
+<!-- COPYRIGHT EFFECTIVE MEASURE -->
+<script type="text/javascript">
+(function() {
+var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+em.src = ('https:' == document.location.protocol ? 'https://th-ssl' : 'http://th-cdn') + '.effectivemeasure.net/em.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+})();
+</script>
+<noscript>
+<img src="//th.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+</noscript>
+<!--END EFFECTIVE MEASURE CODE -->
+				
+
+
+
+
+
+<!-- Google Code for Property Listings Visitor for Sale Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008172415;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "4yYlCNGg_gIQ__rd4AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1008172415/?value=0&amp;label=4yYlCNGg_gIQ__rd4AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+		
+
+				
+                    
+				
+
+				
+
+				
+						
+
+	<!-- listing detail page -->
+							
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</div> 
+
+
+
+	<div class="clearboth"></div>
+
+
+	<!-- PLACE THIS CODE AT THE END OF THE BODY TAG -->
+<script type="text/javascript" src="https://fluidsurveys-com.fs.cm/media/static/survey-prompts.js?"></script>
+<script type="text/javascript">
+	jQuery.noConflict(true);
+	if (typeof GURU_EXCLUDE_NPS == 'undefined') 
+	{
+		var FSPROMPT = new SurveyPrompt({
+	        id: "6614",
+	        href: "https://fluidsurveys.com/s/propertyguru/nps-consumer-th/prompt/6614/",
+	        "$": jQuery,
+	        cookie: 'FSPrompt-6614'
+		}).setup();
+	}
+</script>
+
+
+
+
+<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName("script")[0];
+	a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/0948.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+<link rel="stylesheet" href="//th1-cdn.pgimgs.com/cssprod/touch/smart-app-banner.css?290715_10" type="text/css" media="screen"/>
+<script type="text/javascript" src="//th1-cdn.pgimgs.com/jsprod/touch/smart-app-banner.js?290715_10"></script>
+<script type="text/javascript">
+    new SmartBanner({
+      	daysHidden: 15,   // days to hide banner after close button is clicked (defaults to 15)
+      	daysReminder: 90, // days to hide banner after "VIEW" button is clicked (defaults to 90)
+      	appStoreLanguage: 'us', // language code for the App Store (defaults to us)
+      	title: 'DDproperty',
+        author: 'PropertyGuru Pte Ltd',
+      	button: 'OPEN',
+      	store: {
+        	ios: 'On the App Store',
+        	android: 'In Google Play'
+      	},
+      	price: {
+          	ios: 'FREE',
+        	android: 'FREE'
+      	}
+  	});
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b84826e362","applicationID":"400465","transactionName":"b1NaMEYAXxIEUkAPXFYZexFHFV4MSnJbCEdKWVQIURNuMRdeRANBTE9rAVUTUgkpWEcSWlZRfAFAAFgN","queueTime":0,"applicationTime":330,"atts":"QxRZRg4aTBw=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+
+
+</html>
