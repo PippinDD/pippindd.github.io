@@ -1,0 +1,6 @@
+.slot-collapse .slotMachineContainer div {
+	display: block;
+	height: 54px;
+	font-size: 50px;
+	overflow: hidden;
+}
