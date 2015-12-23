@@ -1,0 +1,30 @@
+.slot-collapse .slotMachineContainer div {
+	display: block;
+	height: 54px;
+	font-size: 50px;
+	overflow: hidden;
+}
+
+.right-menu {
+    text-align: center;
+}
+
+.right-menu > * {
+    margin-bottom: 15px;
+}
+
+.col-sm-4.candidate {
+    padding: 0;
+}
+
+.candidate {
+    text-align: center;
+    font-size: 50px;
+    padding: 30px 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.prize {
+    background-color: #b4005a;
+    color: #fff;
+}
