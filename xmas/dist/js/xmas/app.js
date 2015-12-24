@@ -8,71 +8,71 @@ $(function() {
 var Staff = {};
 
 Staff.b2c = [
-	"Amornrat Yongpoch",
-	"Budsayaphan Khomkham",
-	"Chakrit Boonkasem",
-	"Chungkwan Nakapraving",
-	"Kamolpat Swaengkit",
-	"Methavee Phoosriwarangkul",
-	"Nattagarn Attaphaiboon",
-	"Paninraj Marneewarn",
-	"Pimjai Bunchuprasert",
-	"Rachawadee Sookmee",
-	"Ruchirek Srisaensuk",
-	"Sidarat Suangsomboon",
-	"Uchuka Paensuwan"
+	"1. Amornrat Yongpoch",
+	"2. Budsayaphan Khomkham",
+	"3. Chakrit Boonkasem",
+	"4. Chungkwan Nakapraving",
+	"5. Kamolpat Swaengkit",
+	"6. Methavee Phoosriwarangkul",
+	"7. Nattagarn Attaphaiboon",
+	"8. Paninraj Marneewarn",
+	"9. Pimjai Bunchuprasert",
+	"10. Rachawadee Sookmee",
+	"11. Ruchirek Srisaensuk",
+	"12. Sidarat Suangsomboon",
+	"13. Uchuka Paensuwan"
 ];
 
 Staff.engineer = [
-	"Ahmad Satiri Aseli",
-	"Ajdanai Yuktanandana",
-	"Akarapong Ngearnpra",
-	"Andrei Dumitru Blotu",
-	"Chalat Luprasit",
-	"Chatchai Kritsetsakul",
-	"Christian Grassi",
-	"Christophe Kevin Vidal",
-	"Dan Podeanu",
-	"Kitja Chalongdej",
-	"Natsiree Futragoon",
-	"Nayana Kumara Hettiarachchi",
-	"Onsinee Chongsermsirisakul",
-	"Pavel Tobias",
-	"Peerachai Phanusuwat",
-	"Piyawat Chanthanasombut",
-	"Shatshai Saeaio",
-	"Siriwat Seributra",
-	"Tanin Srivaraphong",
-	"Vlad Poenaru",
-	"Warun Kietduriyakul",
-	"Wongsakorn Nitisopa"
+	"1. Ahmad Satiri Aseli",
+	"2. Ajdanai Yuktanandana",
+	"3. Akarapong Ngearnpra",
+	"4. Andrei Dumitru Blotu",
+	"5. Chalat Luprasit",
+	"6. Chatchai Kritsetsakul",
+	"7. Christian Grassi",
+	"8. Christophe Kevin Vidal",
+	"9. Dan Podeanu",
+	"10. Kitja Chalongdej",
+	"11. Natsiree Futragoon",
+	"12. Nayana Kumara Hettiarachchi",
+	"13. Onsinee Chongsermsirisakul",
+	"14. Pavel Tobias",
+	"15. Peerachai Phanusuwat",
+	"16. Piyawat Chanthanasombut",
+	"17. Shatshai Saeaio",
+	"18. Siriwat Seributra",
+	"19. Tanin Srivaraphong",
+	"20. Vlad Poenaru",
+	"21. Warun Kietduriyakul",
+	"22. Wongsakorn Nitisopa"
 ];
 
 Staff.marketing = [
-	"Araya Siripayuk",
-	"Arpaporn Charoenphol",
-	"Chaiyasit Bunnag",
-	"Chanasit Wiwatwaraphol",
-	"Chetapol Manit",
-	"Kamonwan Sae-pung",
-	"Kanchana Paha",
-	"Kittikom Pojanee",
-	"Leartronnakorn Arunleartchevin",
-	"Napong Panthong",
-	"Patanan Neovakul",
-	"Pisitachat Lieangnak",
-	"Salinket Jareanbunphon",
-	"Thanavat Vithyaviranont",
-	"Thannicha Yamkratok",
-	"Watchara Wongsanga"
+	"1. Araya Siripayuk",
+	"2. Arpaporn Charoenphol",
+	"3. Chaiyasit Bunnag",
+	"4. Chanasit Wiwatwaraphol",
+	"5. Chetapol Manit",
+	"6. Kamonwan Sae-pung",
+	"7. Kanchana Paha",
+	"8. Kittikom Pojanee",
+	"9. Leartronnakorn Arunleartchevin",
+	"10. Napong Panthong",
+	"11. Patanan Neovakul",
+	"12. Pisitachat Lieangnak",
+	"13. Salinket Jareanbunphon",
+	"14. Thanavat Vithyaviranont",
+	"15. Thannicha Yamkratok",
+	"16. Watchara Wongsanga"
 ];
 
 Staff.operation = [
-	"Pailin Kitbumrung",
-	"Sarinthip Trakuljae",
-	"Sunee Rirkvaleekul",
-	"พี่นา (แม่บ้าน)",
-	"พี่สุทิน (Messenger)"
+	"1. Pailin Kitbumrung",
+	"2. Sarinthip Trakuljae",
+	"3. Sunee Rirkvaleekul",
+	"4. พี่นา (แม่บ้าน)",
+	"5. พี่สุทิน (Messenger)"
 ];
 
 Staff.teams = {
@@ -99,19 +99,19 @@ Staff.teams = {
 };
 
 Staff.tele = [
-	"Arporn Pinyo",
-	"Bhoomipat Jakboripat",
-	"Jeeranan Sae-aue",
-	"Juthamas Tapaneeyakul",
-	"Kingkamon Bunyakhom",
-	"Panida Keawyot",
-	"Pattharaprapa Pakorntanapat",
-	"Phuchisa Pakorntanapat",
-	"Sarinphat Ekariyaphong",
-	"Thichapan Metheepakornchai",
-	"Wirinya Silarujiratthorn",
-	"Witoonpokkarak Chanthipa",
-	"Wiwat Siriwiwattanakul"
+	"1. Arporn Pinyo",
+	"2. Bhoomipat Jakboripat",
+	"3. Jeeranan Sae-aue",
+	"4. Juthamas Tapaneeyakul",
+	"5. Kingkamon Bunyakhom",
+	"6. Panida Keawyot",
+	"7. Pattharaprapa Pakorntanapat",
+	"8. Phuchisa Pakorntanapat",
+	"9. Sarinphat Ekariyaphong",
+	"10. Thichapan Metheepakornchai",
+	"11. Wirinya Silarujiratthorn",
+	"12. Witoonpokkarak Chanthipa",
+	"13. Wiwat Siriwiwattanakul"
 ];
 
 var AddAnswer = React.createClass({displayName: "AddAnswer",
@@ -121,7 +121,7 @@ var AddAnswer = React.createClass({displayName: "AddAnswer",
 		var obj = $(this.refs.answer.getDOMNode());
 
 		if (obj.val()) {
-			gameDispatcher.addAnswer($(obj).val().substring(0, 3));
+			gameDispatcher.addAnswer($(obj).val().substring(0, 2));
 			$(obj).val("");
 		}
 	},
@@ -130,18 +130,20 @@ var AddAnswer = React.createClass({displayName: "AddAnswer",
 		return React.createElement("div", {className: "row"}, 
 			React.createElement("div", {className: "col-sm-8 col-sm-offset-2 well"}, 
 				React.createElement("h4", null, "Answer"), 
-
 				React.createElement("form", {onSubmit:  this.onAnswer}, 
-					React.createElement("div", {className: "input-group"}, 
-						React.createElement("input", {type: "number", maxLength: "3", className: "form-control", ref: "answer"}), 
+					React.createElement("div", {className: "col-sm-12 input-group"}, 
+						React.createElement("input", {onKeyDown:  gameDispatcher.onAnswerInput, type: "number", className: "col-sm-12", ref: "answer"}), 
 						React.createElement("div", {className: "input-group-btn"}, 
 							React.createElement("input", {type: "submit", 
-							       className: "btn btn-primary", 
+							       className: "btn btn-primary noshow", 
 							       onClick:  this.onAnswer, 
 							       value: "OK"})
 						)
 					)
 				)
+			), 
+			React.createElement("div", {className: "col-sm-12"}, 
+				React.createElement(Answers, React.__spread({},  this.props ))
 			)
 		)
 	}
@@ -149,17 +151,16 @@ var AddAnswer = React.createClass({displayName: "AddAnswer",
 
 var Answers = React.createClass({displayName: "Answers",
 	render: function() {
+		gameDispatcher.calAnswers();
+
 		return React.createElement("div", {className: "text-center row"}, 
 			 gameStore.answers.map(function(answer) {
-				return React.createElement("div", {className: "col-sm-2 text-center well"}, 
-					React.createElement("h3", null,  answer.val() )
+				return React.createElement("div", {className: "col-sm-3 text-center btn btn-default"}, 
+					React.createElement("div", {className: " answer-number"},  answer.val() )
 				);
 			}), 
-			React.createElement("div", {className: "col-sm-2 text-center well"}, 
-				"="
-			), 
-			React.createElement("div", {className: "col-sm-2 text-center well"}, 
-				React.createElement("h3", null,  gameStore.sumAnswer.val() )
+			React.createElement("div", {className: "col-sm-3 text-center btn btn-success"}, 
+				React.createElement("div", {className: "answer-number"},  gameStore.sumAnswer.val() )
 			)
 		)
 	}
@@ -196,12 +197,12 @@ var Candidates = React.createClass({displayName: "Candidates",
 		if (gameStore.displayCounter.val())
 			return React.createElement("div", {className: "row"}, 
 				React.createElement("div", {className: "col-sm-12 candidate prize"}, 
-					pointer+1, ". ",  gameStore.candidates[pointer].val() 
+					 gameStore.candidates[pointer].val() 
 				)
 			);
 
-		return React.createElement("table", {className: "table table-compacted table-stripped"}, 
-			React.createElement("thead", null, 
+		return React.createElement("table", {className: "table table-compacted table-stripped candidates-table"}, 
+			React.createElement("thead", {className: "noshow"}, 
 			React.createElement("tr", null, 
 				React.createElement("th", {colSpan: "2", className: "col-sm-12 text-center"}, "Name")
 			)
@@ -209,7 +210,7 @@ var Candidates = React.createClass({displayName: "Candidates",
 			React.createElement("tbody", null, 
 				gameStore.candidates.map(function (candidate, i) {
 					return React.createElement("tr", {key:  i }, 
-						React.createElement("td", null,  i+1, ". ",  candidate.val() )
+						React.createElement("td", null,  candidate.val() )
 					)
 				})
 			)
@@ -265,13 +266,15 @@ var GamePlay = React.createClass({displayName: "GamePlay",
 
 		return React.createElement("div", {className: "container"}, 
 			React.createElement("div", {className: "row"}, 
-				React.createElement("div", {className: "col-sm-9"}, 
+				React.createElement("div", {className: "col-sm-12"}, 
+					React.createElement(RightMenu, React.__spread({},  this.props))
+				), 
+				React.createElement("div", {className: "col-sm-12"}, 
 					 !gameStore.reviewAnswers.val() ? null :
 						React.createElement(Answers, React.__spread({},  this.props )), 
 					
 					 page 
-				), 
-				React.createElement(RightMenu, React.__spread({},  this.props))
+				)
 			)
 		)
 	}
@@ -345,6 +348,7 @@ var gameStore = new Cortex({
 
 var gameDispatcher = {
 	reset: function() {
+		gameDispatcher.initializeSound();
 		gameStore.candidates.set([]);
 
 		gameStore.answers.set([]);
@@ -363,7 +367,8 @@ var gameDispatcher = {
 	},
 
 	setCandidates: function(team) {
-		gameStore.candidates.set(_.shuffle(Staff[team]));
+		//gameStore.candidates.set(_.shuffle(Staff[team]));
+		gameStore.candidates.set(Staff[team]);
 	},
 
 	addWinner: function(team, winner) {
@@ -457,22 +462,66 @@ var gameDispatcher = {
 		gameStore.pointer.set(pointer);
 
 		if (gameStore.spinning.val() == false) {
-			setTimeout(gameDispatcher.spin, 80);
-
+			setTimeout(gameDispatcher.spin, 120);
 			return;
 		}
 
 		if (counter > 0) {
 			gameStore.counter.set(counter);
 			setTimeout(gameDispatcher.spin, gameDispatcher.getTimeout());
+			gameDispatcher.playSound("pop");
 		} else {
 			gameStore.counter.set(0);
 			gameDispatcher.setSpinning(false);
 			gameStore.won.set(true);
+			gameDispatcher.playSound("tada");
 
 			winner = gameStore.candidates.val()[gameStore.pointer.val()];
 
 			gameStore.winner.set(winner);
+		}
+	},
+
+	audioChannels: [],
+
+	initializeSound: function() {
+		var channel_max = 4;										// number of channels
+		var ch = gameDispatcher.audioChannels = new Array();
+		for (a=0; a<channel_max; a++) {								// prepare the channels
+			ch[a] = new Array();
+			ch[a]['channel'] = new Audio();				// create a new audio object
+			ch[a]['finished'] = -1;						// expected end time for this channel
+		}
+	},
+
+	playSound: function(id) {
+/*		if (audioElement == null) {
+			audioElement = document.createElement("audio");
+			audioElement.setAttribute("src", "/xmas/assets/" + name);
+			audioElement.addEventListener("load", function () {
+				audioElement.play()
+			}, true);
+			audioElement.addEventListener("ended", function () {
+            document.removeChild(this);
+        	}, false);
+
+			gameDispatcher.sounds[name] = audioElement;
+		}
+		
+		audioElement.pause();
+		audioElement.play();*/
+
+		var thisTime;
+		var ch = gameDispatcher.audioChannels;
+		for (a=0;a<ch.length;a++) {
+			thisTime = new Date();
+			if (ch[a]['finished'] < thisTime.getTime()) {			// is this channel finished?
+				ch[a]['finished'] = thisTime.getTime() + document.getElementById(id).duration*1000;
+				ch[a]['channel'].src = document.getElementById(id).src;
+				ch[a]['channel'].load();
+				ch[a]['channel'].play();
+				break;
+			}
 		}
 	},
 	getTimeout: function() {
@@ -482,30 +531,37 @@ var gameDispatcher = {
 			return 5;
 
 		if (counter > 250)
-			return 7;
+			return 10;
 
 		if (counter > 100)
-			return 9;
+			return 15;
 
 		if (counter > 50)
-			return 20;
-
-		if (counter > 40)
-			return 50;
+			return 25;
 
 		if (counter > 20)
-			return 75;
+			return 50;
 
 		if (counter > 5)
 			return 100;
 
 		if (counter > 3)
-			return 250;
+			return 300;
 
 		if (counter > 1)
-			return 700;
+			return 500;
 
 		return 1000;
+	},
+
+	onAnswerInput: function(event) {
+		var keyCode = event.keyCode;
+
+		if (keyCode == 13) { // Enter Key
+			gameDispatcher.playSound("enter");
+		} else {
+			gameDispatcher.playSound("beep");
+		}
 	}
 };
 
@@ -515,36 +571,34 @@ var RightMenu = React.createClass({displayName: "RightMenu",
 			gameEnded = gameStore.winners[team].count() == this.props.teamData.prizes;
 
 		if (gameStore.displayCounter.val()) {
-			return React.createElement("div", {className: "col-sm-3 right-menu"}, 
-				React.createElement("div", {className: "well text-center"}, 
-					React.createElement("h2", null,  gameStore.counter.val() )
-				), 
-
+			return React.createElement("div", {className: "col-sm-12 right-menu"}, 
 				 gameStore.winner.val() == null ?
-					React.createElement("a", {className: "col-xs-12 btn btn-primary", 
+					React.createElement("a", {className: "col-xs-3 btn btn-primary", 
 					   onClick:  gameDispatcher.startSpinning}, 
 						React.createElement("i", {className: "glyphicon glyphicon-heart"}), " Lucky Draw!"
 					) :
-					React.createElement("a", {className: "col-xs-12 btn btn-default", 
+					React.createElement("a", {className: "col-xs-3 btn btn-default", 
 					   onClick:  gameDispatcher.hideCounter}, 
 						React.createElement("i", {className: "glyphicon glyphicon-repeat"}), " Start new round"
-					)
+					), 
 				
+				React.createElement("div", {className: "col-sm-12 well spin-counter text-center"}, 
+					 gameStore.counter.val() || "WINNER !!!"
+				)
 			)
 		}
 
 		if (routeStore.page.val() == 'answer') {
-			return React.createElement("div", {className: "col-sm-3 right-menu"}, 
-				React.createElement("a", {className: "col-xs-12 btn btn-default", 
-				   href: "#/" + team}, 
+			return React.createElement("div", {className: "col-sm-12 right-menu"}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-default", href: "#/" + team}, 
 					React.createElement("i", {className: "glyphicon glyphicon-ok"}), " Done"
 				)
 			)
 		}
 
 		if (routeStore.page.val() == 'winners') {
-			return React.createElement("div", {className: "col-sm-3 right-menu"}, 
-				React.createElement("a", {className: "col-xs-12 btn btn-default", 
+			return React.createElement("div", {className: "col-sm-12 right-menu"}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-default", 
 				   href: "#/" + team}, 
 					"Close"
 				)
@@ -552,40 +606,40 @@ var RightMenu = React.createClass({displayName: "RightMenu",
 		}
 
 		if (gameEnded) {
-			return React.createElement("div", {className: "col-sm-3 right-menu"}, 
-				React.createElement("a", {className: "col-xs-12 btn btn-success", href:  "#/" + team + "/winners"}, 
+			return React.createElement("div", {className: "col-sm-12 right-menu"}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-success", href:  "#/" + team + "/winners"}, 
 					React.createElement("i", {className: "glyphicon glyphicon-gift"}), " Winner"
 				)
 			)
 		}
 
-		return React.createElement("div", {className: "col-sm-3 right-menu"}, 
-			React.createElement("a", {className: "col-xs-12 btn btn-default", 
+		return React.createElement("div", {className: "col-sm-12 right-menu"}, 
+			React.createElement("a", {className: "col-xs-2 btn btn-default", 
 			   href: "#/" + team + "/answer"}, 
 				React.createElement("i", {className: "glyphicon glyphicon-plus"}), " Add Answer"
 			), 
 
-			React.createElement("a", {className: "col-xs-12 btn btn-default", 
+			React.createElement("a", {className: "col-xs-2 btn btn-default noshow", 
 			   onClick:  gameDispatcher.shuffleCandidate}, 
 				React.createElement("i", {className: "glyphicon glyphicon-refresh"}), " Shuffle"
 			), 
 
 			 gameStore.reviewAnswers.val() ?
-				React.createElement("a", {className: "col-xs-12 btn btn-default", onClick:  gameDispatcher.hideAnswers}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-default noshow", onClick:  gameDispatcher.hideAnswers}, 
 					React.createElement("i", {className: "glyphicon glyphicon-eye-close"}), " Hide Answer"
 				) :
-				React.createElement("a", {className: "col-xs-12 btn btn-warning", onClick:  gameDispatcher.showAnswers}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-warning noshow", onClick:  gameDispatcher.showAnswers}, 
 					React.createElement("i", {className: "glyphicon glyphicon-eye-open"}), " Show Answer"
 				), 
 			
 
 			 gameStore.sumAnswer.val() <= 0 ? null :
-				React.createElement("a", {className: "col-xs-12 btn btn-primary", onClick:  gameDispatcher.showCounter}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-primary", onClick:  gameDispatcher.showCounter}, 
 					React.createElement("i", {className: "glyphicon glyphicon-eye-open"}), " Start"
 				), 
 			
 
-			React.createElement("a", {className: "col-xs-12 btn btn-success", href:  "#/" + team + "/winners"}, 
+			React.createElement("a", {className: "col-xs-2 btn btn-success", href:  "#/" + team + "/winners"}, 
 				React.createElement("i", {className: "glyphicon glyphicon-gift"}), " Winner"
 			)
 		)

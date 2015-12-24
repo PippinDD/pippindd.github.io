@@ -9,6 +9,10 @@
     text-align: center;
 }
 
+.noshow {
+    display: none;
+}
+
 .right-menu > * {
     margin-bottom: 15px;
 }
@@ -19,7 +23,8 @@
 
 .candidate {
     text-align: center;
-    font-size: 50px;
+    font-size: 65px;
+    font-weight: bold;
     padding: 30px 10px;
     border: 1px solid #dcdcdc;
 }
@@ -27,4 +32,21 @@
 .prize {
     background-color: #b4005a;
     color: #fff;
+}
+
+.input-group {
+    font-size: 100px;
+}
+
+.answer-number {
+    font-size: 50px;
+}
+
+.candidates-table {
+    font-size: 40px;
+}
+
+.spin-counter {
+    font-size: 50px;
+    font-weight: bold;
 }

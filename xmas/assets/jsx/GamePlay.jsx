@@ -22,13 +22,15 @@ var GamePlay = React.createClass({
 
 		return <div className="container">
 			<div className="row">
-				<div className="col-sm-9">
+				<div className="col-sm-12">
+					<RightMenu {...this.props}/>
+				</div>
+				<div className="col-sm-12">
 					{ !gameStore.reviewAnswers.val() ? null :
 						<Answers {...this.props }/>
 					}
 					{ page }
 				</div>
-				<RightMenu {...this.props}/>
 			</div>
 		</div>
 	}

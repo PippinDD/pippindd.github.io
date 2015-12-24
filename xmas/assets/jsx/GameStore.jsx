@@ -26,6 +26,7 @@ var gameStore = new Cortex({
 
 var gameDispatcher = {
 	reset: function() {
+		gameDispatcher.initializeSound();
 		gameStore.candidates.set([]);
 
 		gameStore.answers.set([]);
@@ -44,7 +45,8 @@ var gameDispatcher = {
 	},
 
 	setCandidates: function(team) {
-		gameStore.candidates.set(_.shuffle(Staff[team]));
+		//gameStore.candidates.set(_.shuffle(Staff[team]));
+		gameStore.candidates.set(Staff[team]);
 	},
 
 	addWinner: function(team, winner) {
@@ -138,22 +140,66 @@ var gameDispatcher = {
 		gameStore.pointer.set(pointer);
 
 		if (gameStore.spinning.val() == false) {
-			setTimeout(gameDispatcher.spin, 80);
-
+			setTimeout(gameDispatcher.spin, 120);
 			return;
 		}
 
 		if (counter > 0) {
 			gameStore.counter.set(counter);
 			setTimeout(gameDispatcher.spin, gameDispatcher.getTimeout());
+			gameDispatcher.playSound("pop");
 		} else {
 			gameStore.counter.set(0);
 			gameDispatcher.setSpinning(false);
 			gameStore.won.set(true);
+			gameDispatcher.playSound("tada");
 
 			winner = gameStore.candidates.val()[gameStore.pointer.val()];
 
 			gameStore.winner.set(winner);
+		}
+	},
+
+	audioChannels: [],
+
+	initializeSound: function() {
+		var channel_max = 4;										// number of channels
+		var ch = gameDispatcher.audioChannels = new Array();
+		for (a=0; a<channel_max; a++) {								// prepare the channels
+			ch[a] = new Array();
+			ch[a]['channel'] = new Audio();				// create a new audio object
+			ch[a]['finished'] = -1;						// expected end time for this channel
+		}
+	},
+
+	playSound: function(id) {
+/*		if (audioElement == null) {
+			audioElement = document.createElement("audio");
+			audioElement.setAttribute("src", "/xmas/assets/" + name);
+			audioElement.addEventListener("load", function () {
+				audioElement.play()
+			}, true);
+			audioElement.addEventListener("ended", function () {
+            document.removeChild(this);
+        	}, false);
+
+			gameDispatcher.sounds[name] = audioElement;
+		}
+		
+		audioElement.pause();
+		audioElement.play();*/
+
+		var thisTime;
+		var ch = gameDispatcher.audioChannels;
+		for (a=0;a<ch.length;a++) {
+			thisTime = new Date();
+			if (ch[a]['finished'] < thisTime.getTime()) {			// is this channel finished?
+				ch[a]['finished'] = thisTime.getTime() + document.getElementById(id).duration*1000;
+				ch[a]['channel'].src = document.getElementById(id).src;
+				ch[a]['channel'].load();
+				ch[a]['channel'].play();
+				break;
+			}
 		}
 	},
 	getTimeout: function() {
@@ -163,29 +209,36 @@ var gameDispatcher = {
 			return 5;
 
 		if (counter > 250)
-			return 7;
+			return 10;
 
 		if (counter > 100)
-			return 9;
+			return 15;
 
 		if (counter > 50)
-			return 20;
-
-		if (counter > 40)
-			return 50;
+			return 25;
 
 		if (counter > 20)
-			return 75;
+			return 50;
 
 		if (counter > 5)
 			return 100;
 
 		if (counter > 3)
-			return 250;
+			return 300;
 
 		if (counter > 1)
-			return 700;
+			return 500;
 
 		return 1000;
+	},
+
+	onAnswerInput: function(event) {
+		var keyCode = event.keyCode;
+
+		if (keyCode == 13) { // Enter Key
+			gameDispatcher.playSound("enter");
+		} else {
+			gameDispatcher.playSound("beep");
+		}
 	}
 };

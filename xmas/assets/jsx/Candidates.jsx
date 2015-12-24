@@ -29,12 +29,12 @@ var Candidates = React.createClass({
 		if (gameStore.displayCounter.val())
 			return <div className="row">
 				<div className="col-sm-12 candidate prize">
-					{pointer+1}. { gameStore.candidates[pointer].val() }
+					{ gameStore.candidates[pointer].val() }
 				</div>
 			</div>;
 
-		return <table className="table table-compacted table-stripped">
-			<thead>
+		return <table className="table table-compacted table-stripped candidates-table">
+			<thead className="noshow">
 			<tr>
 				<th colSpan="2" className="col-sm-12 text-center">Name</th>
 			</tr>
@@ -42,7 +42,7 @@ var Candidates = React.createClass({
 			<tbody>{
 				gameStore.candidates.map(function (candidate, i) {
 					return <tr key={ i }>
-						<td>{ i+1 }. { candidate.val() }</td>
+						<td>{ candidate.val() }</td>
 					</tr>
 				})
 			}</tbody>
