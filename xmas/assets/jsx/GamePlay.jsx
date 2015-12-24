@@ -16,6 +16,10 @@ var GamePlay = React.createClass({
 				page = <Winners {...this.props }/>;
 				break;
 
+			case "lucky-draw":
+				page = <WheelOfFortune {...this.props}/>;
+				break;
+
 			default:
 				page = <Candidates {...this.props }/>;
 		}
@@ -26,9 +30,6 @@ var GamePlay = React.createClass({
 					<RightMenu {...this.props}/>
 				</div>
 				<div className="col-sm-12">
-					{ !gameStore.reviewAnswers.val() ? null :
-						<Answers {...this.props }/>
-					}
 					{ page }
 				</div>
 			</div>

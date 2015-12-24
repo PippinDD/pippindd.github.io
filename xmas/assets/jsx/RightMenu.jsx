@@ -3,22 +3,8 @@ var RightMenu = React.createClass({
 		var team = this.props.team,
 			gameEnded = gameStore.winners[team].count() == this.props.teamData.prizes;
 
-		if (gameStore.displayCounter.val()) {
-			return <div className="col-sm-12 right-menu">
-				{ gameStore.winner.val() == null ?
-					<a className="col-xs-3 btn btn-primary"
-					   onClick={ gameDispatcher.startSpinning }>
-						<i className="glyphicon glyphicon-heart"/> Lucky Draw!
-					</a> :
-					<a className="col-xs-3 btn btn-default"
-					   onClick={ gameDispatcher.hideCounter }>
-						<i className="glyphicon glyphicon-repeat"/> Start new round
-					</a>
-				}
-				<div className="col-sm-12 well spin-counter text-center">
-					{ gameStore.counter.val() || "WINNER !!!" }
-				</div>
-			</div>
+		if (routeStore.page.val() == 'lucky-draw') {
+			return null;
 		}
 
 		if (routeStore.page.val() == 'answer') {
@@ -67,7 +53,7 @@ var RightMenu = React.createClass({
 			}
 
 			{ gameStore.sumAnswer.val() <= 0 ? null :
-				<a className="col-xs-2 btn btn-primary" onClick={ gameDispatcher.showCounter }>
+				<a className="col-xs-2 btn btn-primary" href={ "#/" + team + "/lucky-draw" }>
 					<i className="glyphicon glyphicon-eye-open"/> Start
 				</a>
 			}

@@ -260,6 +260,10 @@ var GamePlay = React.createClass({displayName: "GamePlay",
 				page = React.createElement(Winners, React.__spread({},  this.props ));
 				break;
 
+			case "lucky-draw":
+				page = React.createElement(WheelOfFortune, React.__spread({},  this.props));
+				break;
+
 			default:
 				page = React.createElement(Candidates, React.__spread({},  this.props ));
 		}
@@ -270,9 +274,6 @@ var GamePlay = React.createClass({displayName: "GamePlay",
 					React.createElement(RightMenu, React.__spread({},  this.props))
 				), 
 				React.createElement("div", {className: "col-sm-12"}, 
-					 !gameStore.reviewAnswers.val() ? null :
-						React.createElement(Answers, React.__spread({},  this.props )), 
-					
 					 page 
 				)
 			)
@@ -412,7 +413,7 @@ var gameDispatcher = {
 	},
 
 	showCounter: function(e) {
-		e.preventDefault();
+		e && e.preventDefault();
 		gameDispatcher.hideAnswers();
 		gameStore.counter.set(gameStore.sumAnswer.val());
 		gameStore.displayCounter.set(true);
@@ -425,7 +426,7 @@ var gameDispatcher = {
 		setTimeout(gameDispatcher.spin, gameDispatcher.getTimeout());
 	},
 	hideCounter: function(e) {
-		e.preventDefault();
+		e && e.preventDefault();
 		gameDispatcher.setSpinning(false);
 		gameDispatcher.addWinner(routeStore.team.val(), gameStore.winner.val());
 		gameDispatcher.resetAnswers();
@@ -509,7 +510,7 @@ var gameDispatcher = {
 
 			gameDispatcher.sounds[name] = audioElement;
 		}
-		
+
 		audioElement.pause();
 		audioElement.play();*/
 
@@ -572,22 +573,8 @@ var RightMenu = React.createClass({displayName: "RightMenu",
 		var team = this.props.team,
 			gameEnded = gameStore.winners[team].count() == this.props.teamData.prizes;
 
-		if (gameStore.displayCounter.val()) {
-			return React.createElement("div", {className: "col-sm-12 right-menu"}, 
-				 gameStore.winner.val() == null ?
-					React.createElement("a", {className: "col-xs-3 btn btn-primary", 
-					   onClick:  gameDispatcher.startSpinning}, 
-						React.createElement("i", {className: "glyphicon glyphicon-heart"}), " Lucky Draw!"
-					) :
-					React.createElement("a", {className: "col-xs-3 btn btn-default", 
-					   onClick:  gameDispatcher.hideCounter}, 
-						React.createElement("i", {className: "glyphicon glyphicon-repeat"}), " Start new round"
-					), 
-				
-				React.createElement("div", {className: "col-sm-12 well spin-counter text-center"}, 
-					 gameStore.counter.val() || "WINNER !!!"
-				)
-			)
+		if (routeStore.page.val() == 'lucky-draw') {
+			return null;
 		}
 
 		if (routeStore.page.val() == 'answer') {
@@ -636,7 +623,7 @@ var RightMenu = React.createClass({displayName: "RightMenu",
 			
 
 			 gameStore.sumAnswer.val() <= 0 ? null :
-				React.createElement("a", {className: "col-xs-2 btn btn-primary", onClick:  gameDispatcher.showCounter}, 
+				React.createElement("a", {className: "col-xs-2 btn btn-primary", href:  "#/" + team + "/lucky-draw"}, 
 					React.createElement("i", {className: "glyphicon glyphicon-eye-open"}), " Start"
 				), 
 			
@@ -660,6 +647,46 @@ var TeamList = React.createClass({displayName: "TeamList",
 					)
 				}) 
 			)
+		)
+	}
+});
+
+var WheelOfFortune = React.createClass({displayName: "WheelOfFortune",
+	componentWillMount: function() {
+		gameDispatcher.showCounter();
+	},
+	componentWillUnmount: function() {
+		gameDispatcher.hideCounter();
+	},
+
+	render: function() {
+		var pointer = gameStore.pointer.val();
+
+		return React.createElement("div", {className: "col-sm-12 right-menu"}, 
+			React.createElement("div", {className: "col-sm-12 candidate prize"}, 
+				 gameStore.candidates[pointer].val() 
+			), 
+
+			 gameStore.winner.val() ?
+				React.createElement("div", {className: "col-sm-12 well spin-counter text-center winner"}, 
+					React.createElement("span", null, React.createElement("i", {className: "glyphicon glyphicon-gift"}), " WINNER ", React.createElement("i", {className: "glyphicon glyphicon-gift"}))
+				) :
+				React.createElement("div", {className: "col-sm-12 well spin-counter text-center"}, 
+					 gameStore.counter.val() 
+				), 
+			
+
+			 gameStore.winner.val() == null ?
+				React.createElement("a", {className: "col-xs-12 btn btn-primary lucky-draw", 
+				   disabled:  gameStore.spinning.val(), 
+				   onClick:  gameDispatcher.startSpinning}, 
+					React.createElement("i", {className: "glyphicon glyphicon-heart"}), " Lucky Draw!"
+				) :
+				React.createElement("a", {className: "col-xs-12 btn btn-default lucky-draw", 
+				   href:  "#/" + routeStore.team.val()}, 
+					React.createElement("i", {className: "glyphicon glyphicon-repeat"}), " Start new round"
+				)
+			
 		)
 	}
 });
