@@ -24,7 +24,6 @@
 .candidate {
     text-align: center;
     font-size: 65px;
-    font-weight: bold;
     padding: 30px 10px;
     border: 1px solid #dcdcdc;
 }
@@ -36,10 +35,12 @@
 
 .input-group {
     font-size: 100px;
+    font-weight: bold;
 }
 
 .answer-number {
     font-size: 50px;
+    font-weight: bold;
 }
 
 .candidates-table {
@@ -47,6 +48,6 @@
 }
 
 .spin-counter {
-    font-size: 50px;
+    font-size: 65px;
     font-weight: bold;
 }

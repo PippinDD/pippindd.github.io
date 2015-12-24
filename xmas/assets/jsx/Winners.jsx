@@ -6,17 +6,16 @@ var Winners = React.createClass({
 			i;
 
 		for (i=0; i < teamData.prizes; i++) {
-			winners.push(<li key={i}>{ gameStore.winners[team].val()[i] }</li>);
+			winners.push(<tr key={ i }><td>{ gameStore.winners[team].val()[i] }</td></tr>);
 		}
 
 		return <div className="row">
-			<div className="col-sm-8 col-sm-offset-2 well">
-				<h4>Winners</h4>
-
-				<ol>
+			<h3>Winners</h3>
+			<table className="table table-compacted table-stripped candidates-table">
+				<tbody>
 					{ winners }
-				</ol>
-			</div>
+				</tbody>
+			</table>
 		</div>
 	}
 });

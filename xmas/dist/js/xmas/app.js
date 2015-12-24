@@ -411,7 +411,8 @@ var gameDispatcher = {
 		gameStore.reviewAnswers.set(false);
 	},
 
-	showCounter: function() {
+	showCounter: function(e) {
+		e.preventDefault();
 		gameDispatcher.hideAnswers();
 		gameStore.counter.set(gameStore.sumAnswer.val());
 		gameStore.displayCounter.set(true);
@@ -423,7 +424,8 @@ var gameDispatcher = {
 
 		setTimeout(gameDispatcher.spin, gameDispatcher.getTimeout());
 	},
-	hideCounter: function() {
+	hideCounter: function(e) {
+		e.preventDefault();
 		gameDispatcher.setSpinning(false);
 		gameDispatcher.addWinner(routeStore.team.val(), gameStore.winner.val());
 		gameDispatcher.resetAnswers();
@@ -670,14 +672,13 @@ var Winners = React.createClass({displayName: "Winners",
 			i;
 
 		for (i=0; i < teamData.prizes; i++) {
-			winners.push(React.createElement("li", {key: i},  gameStore.winners[team].val()[i] ));
+			winners.push(React.createElement("tr", {key:  i }, React.createElement("td", null,  gameStore.winners[team].val()[i] )));
 		}
 
 		return React.createElement("div", {className: "row"}, 
-			React.createElement("div", {className: "col-sm-8 col-sm-offset-2 well"}, 
-				React.createElement("h4", null, "Winners"), 
-
-				React.createElement("ol", null, 
+			React.createElement("h3", null, "Winners"), 
+			React.createElement("table", {className: "table table-compacted table-stripped candidates-table"}, 
+				React.createElement("tbody", null, 
 					 winners 
 				)
 			)

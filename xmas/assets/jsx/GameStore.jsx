@@ -89,7 +89,8 @@ var gameDispatcher = {
 		gameStore.reviewAnswers.set(false);
 	},
 
-	showCounter: function() {
+	showCounter: function(e) {
+		e.preventDefault();
 		gameDispatcher.hideAnswers();
 		gameStore.counter.set(gameStore.sumAnswer.val());
 		gameStore.displayCounter.set(true);
@@ -101,7 +102,8 @@ var gameDispatcher = {
 
 		setTimeout(gameDispatcher.spin, gameDispatcher.getTimeout());
 	},
-	hideCounter: function() {
+	hideCounter: function(e) {
+		e.preventDefault();
 		gameDispatcher.setSpinning(false);
 		gameDispatcher.addWinner(routeStore.team.val(), gameStore.winner.val());
 		gameDispatcher.resetAnswers();
