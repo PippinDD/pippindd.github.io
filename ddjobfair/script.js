@@ -12,7 +12,7 @@ Array.prototype.shuffle = function() {
 
 $(function(){
   startGame();
-  $(document).on("click", ".game-body .question-choice", onAnswer);
+  $(document).on("tap", ".game-body .question-choice", onAnswer);
 });
 
 var questionNumber, maxQuestionNumber = 7;
