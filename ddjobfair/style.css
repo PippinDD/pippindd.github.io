@@ -1,0 +1,9 @@
+div.game-body { width: 1024px; height: 768px; }
+
+.round { border-radius: 3px; }
+.full-box { width: 96%; margin: 1%; padding: 1%; }
+.half-box { width: 46%; margin: 1%; padding: 1%; }
+div.question-body { width: 100%; height: 100%; }
+div.question-status { height: 6%; font-size: 24px; font-weight: bold; text-align: right; }
+div.question-header { height: 26%; font-size: 30px; font-weight: bold; text-align: center; background-color: salmon; }
+div.question-choice { height: 26%; font-size: 24px; font-weight: bold; text-align: center; background-color: salmon; float: left; }
