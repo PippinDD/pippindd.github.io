@@ -1,7 +1,7 @@
 var currentQuestion = {};
 
 var question = [
-  { q: "Q1", o: "O", x1: "X", x2: "X", x3: "X" },
+  { q: "Where is DDproperty's headquarters?", o: "Singapore", x1: "Indonesia", x2: "Thailand", x3: "Malaysia" },
   { q: "Q2", o: "O", x1: "X", x2: "X", x3: "X" },
   { q: "Q3", o: "O", x1: "X", x2: "X", x3: "X" },
   { q: "Q4", o: "O", x1: "X", x2: "X", x3: "X" },
