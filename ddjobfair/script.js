@@ -61,9 +61,11 @@ function onAnswer (event) {
     var correctAnswer = currentQuestion.o;
     $('.game-body .question-choice').css({ 'background-color' : 'black' })
     if (answer == correctAnswer) {
+      playSound("correct");
       $(this).animate({ 'backgroundColor' : 'lime' });
       numCorrect++;
     } else {
+      playSound("wrong");
       $(this).animate({ 'backgroundColor' : 'red' });
       for (var i = 1; i <= 4; i++) {
         if ($('.game-body #choice' + i).text() == correctAnswer) {
