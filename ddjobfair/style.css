@@ -6,9 +6,12 @@ div.game-body { width: 1000px; height: 640px; }
 .full-box { width: 96%; margin: 1%; padding: 1%; }
 .half-box { width: 46%; margin: 1%; padding: 1%; }
 div.question-body { width: 100%; height: 100%; }
-div.question-status { height: 6%; font-size: 20px; font-weight: bold; text-align: right; }
+div.question-status { background-color: #222; height: 3%; font-size: 20px; font-weight: bold; text-align: right; }
 span.quiz-title { float: left; }
 span.quiz-progress { float: right; }
-div.question-header { background-color: #a01b1b; height: 26%; font-size: 30px; font-weight: bold; text-align: center; }
+div.question-header { background-color: #222; height: 26%; font-size: 30px; font-weight: bold; text-align: center; }
 div.question-choice { background-color: #a01b1b; height: 26%; font-size: 24px; font-weight: bold; text-align: center; float: left; }
 div.question-header p, div.question-choice p { line-height: 165px; margin: 0; }
+
+div.score-status { text-align: center; }
+div.score-header { background-color: #222; height: 26%; font-size: 150px; font-weight: bold; text-align: center; }

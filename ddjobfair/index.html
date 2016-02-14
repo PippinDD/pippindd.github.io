@@ -4,23 +4,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="jquery.color.js"></script>
 <script src="data.js"></script>
 <script src="script.js"></script>
 </head>
 <body>
+<audio id="correct" src="sounds/Ding.mp3" preload="auto"></audio>
+<audio id="wrong" src="sounds/Fart.mp3" preload="auto"></audio>
 <div id="game-body" class="game-body">
 </div>
 <div style="display:none" id="template">
   <div class="question-body" id="question">
-    <div class="full-box question-status">
+    <div class="round full-box question-status">
       <span class="quiz-title">Get to know DDproperty</span>
       <span class="quiz-progress">%QUESTION_STATUS%</span>
     </div>
     <div class="round full-box question-header"><p>%QUESTION_HEADER%</p></div>
-    <div class="round half-box question-choice"><p>%QUESTION_CHOICE_1%</p></div>
-    <div class="round half-box question-choice"><p>%QUESTION_CHOICE_2%</p></div>
-    <div class="round half-box question-choice"><p>%QUESTION_CHOICE_3%</p></div>
-    <div class="round half-box question-choice"><p>%QUESTION_CHOICE_4%</p></div>
+    <div id="choice1" class="round half-box question-choice"><p>%QUESTION_CHOICE_1%</p></div>
+    <div id="choice2" class="round half-box question-choice"><p>%QUESTION_CHOICE_2%</p></div>
+    <div id="choice3" class="round half-box question-choice"><p>%QUESTION_CHOICE_3%</p></div>
+    <div id="choice4" class="round half-box question-choice"><p>%QUESTION_CHOICE_4%</p></div>
+  </div>
+  <div class="question-body" id="end-game">
+    <div class="round full-box score-status">
+      Congratulations !
+    </div>
+    <div class="round full-box score-header"><p>%SCORE%</p></div>
   </div>
 </div>
 </body>
