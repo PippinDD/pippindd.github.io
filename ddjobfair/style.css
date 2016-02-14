@@ -1,4 +1,4 @@
-div.game-body { width: 1024px; height: 768px; }
+div.game-body { width: 1000px; height: 700px; }
 
 .round { border-radius: 3px; }
 .full-box { width: 96%; margin: 1%; padding: 1%; }
