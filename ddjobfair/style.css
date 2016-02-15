@@ -1,10 +1,8 @@
 body { font-family: Helvetica; background-color: black; color: white; }
-.ui-mobile-viewport { background-color: black; }
+.ui-overlay-a { background-color: black !important; }
 
 div.game-body { width: 1000px; height: 640px; }
-div.ui-content { color: white;
-   text-shadow: 0 0 0 !important;
-}
+div.ui-content { color: white; text-shadow: 0 0 0 !important; }
 
 .round { border-radius: 3px; }
 .full-box { width: 96%; margin: 1%; padding: 1%; }
