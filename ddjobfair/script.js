@@ -16,7 +16,7 @@ $(function(){
   $(document).on("tap", ".game-body .score-header", resetGame);
 });
 
-var questionNumber, maxQuestionNumber = 10;
+var questionNumber, maxQuestionNumber = 7;
 var numCorrect;
 var audio = [];
 var answered;
@@ -85,7 +85,7 @@ function onAnswer (event) {
 function renderNextQuestion () {
   if (questionNumber < maxQuestionNumber) {
     questionNumber++;
-    renderQuestion(question[questionNumber]);
+    renderQuestion(question[questionNumber - 1]);
   } else {
     endGame();
   }
