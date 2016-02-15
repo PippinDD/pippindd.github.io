@@ -18,3 +18,4 @@ div.question-header p, div.question-choice p { line-height: 165px; margin: 0; }
 
 div.score-status { text-align: center; }
 div.score-header { background-color: #222; height: 26%; font-size: 150px; font-weight: bold; text-align: center; }
+div.score-header p { margin: 0; }

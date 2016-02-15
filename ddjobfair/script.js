@@ -13,16 +13,20 @@ Array.prototype.shuffle = function() {
 $(function(){
   startGame();
   $(document).on("tap", ".game-body .question-choice", onAnswer);
+  $(document).on("tap", ".game-body .score-header", resetGame);
 });
 
-var questionNumber, maxQuestionNumber = 7;
+var questionNumber, maxQuestionNumber = 2;
 var numCorrect;
 var audio = [];
 var answered;
 
 function startGame () {
   initializeSoundSystem();
+  resetGame();
+}
 
+function resetGame () {
   question.shuffle();
   questionNumber = 0;
   numCorrect = 0;
