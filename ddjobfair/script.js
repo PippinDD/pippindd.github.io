@@ -20,6 +20,7 @@ var questionNumber, maxQuestionNumber = 7;
 var numCorrect;
 var audio = [];
 var answered;
+var sound = {};
 
 function startGame () {
   initializeSoundSystem();
@@ -35,28 +36,31 @@ function resetGame () {
 }
 
 function initializeSoundSystem () {
-  var channel_max = 4;										// number of channels
-	var ch = audio = new Array();
-	for (a=0; a<channel_max; a++) {								// prepare the channels
-		ch[a] = new Array();
-		ch[a]['channel'] = new Audio();				// create a new audio object
-		ch[a]['finished'] = -1;						// expected end time for this channel
-	}
+  // var channel_max = 4;										// number of channels
+	// var ch = audio = new Array();
+	// for (a=0; a<channel_max; a++) {								// prepare the channels
+	// 	ch[a] = new Array();
+	// 	ch[a]['channel'] = new Audio();				// create a new audio object
+	// 	ch[a]['finished'] = -1;						// expected end time for this channel
+	// }
+  sound['correct'] = new Audio('sounds/Ding.mp3');
+  sound['wrong'] = new Audio('sounds/Wrong.mp3');
 }
 
 function playSound (id) {
 	var thisTime;
 	var ch = audio;
-	for (a=0;a<ch.length;a++) {
-		thisTime = new Date();
-		if (ch[a]['finished'] < thisTime.getTime()) {			// is this channel finished?
-			ch[a]['finished'] = thisTime.getTime() + document.getElementById(id).duration*1000;
-			ch[a]['channel'].src = document.getElementById(id).src;
-			ch[a]['channel'].load();
-			ch[a]['channel'].play();
-			break;
-		}
-	}
+  sound[id].play();
+	// for (a=0;a<ch.length;a++) {
+	// 	thisTime = new Date();
+	// 	if (ch[a]['finished'] < thisTime.getTime()) {			// is this channel finished?
+	// 		ch[a]['finished'] = thisTime.getTime() + document.getElementById(id).duration*1000;
+	// 		ch[a]['channel'].src = document.getElementById(id).src;
+	// 		ch[a]['channel'].load();
+	// 		ch[a]['channel'].play();
+	// 		break;
+	// 	}
+	// }
 }
 
 function onAnswer (event) {
