@@ -16,7 +16,7 @@ $(function(){
   $(document).on("tap", ".game-body .score-header", resetGame);
 });
 
-var questionNumber, maxQuestionNumber = 2;
+var questionNumber, maxQuestionNumber = 10;
 var numCorrect;
 var audio = [];
 var answered;
