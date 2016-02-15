@@ -1,5 +1,6 @@
 body { font-family: Helvetica; background-color: black; color: white; }
 .ui-overlay-a { background-color: black !important; }
+.ui-page { background-color: black !important; }
 
 div.game-body { width: 1000px; height: 640px; }
 div.ui-content { color: white; text-shadow: 0 0 0 !important; }
