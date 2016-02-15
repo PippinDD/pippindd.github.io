@@ -2,9 +2,7 @@ body { font-family: Helvetica; background-color: black; color: white; }
 
 div.game-body { width: 1000px; height: 640px; }
 div.ui-content { color: white;
-  -moz-box-shadow: none !important;
-   -webkit-box-shadow: none !important;
-   box-shadow: none !important;
+   text-shadow: 0 0 0 !important;
 }
 
 .round { border-radius: 3px; }
