@@ -102,6 +102,7 @@ function renderNextQuestion () {
 }
 
 function getNextQuestion () {
+  questionPool.shuffle();
   var q = {};
   if (random(0,1) == 0) {
     q.q = questionPool[0][0];
@@ -116,7 +117,7 @@ function getNextQuestion () {
     q.y = questionPool[2][0];
     q.z = questionPool[3][0];
   }
-  questionPool = questionPool.slice(1).shuffle();
+  questionPool = questionPool.slice(1);
   return q;
 }
 
