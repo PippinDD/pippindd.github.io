@@ -1,4 +1,4 @@
-Math.prototype.randomInt = function(low, hi) {
+var random = function(low, hi) {
   return low + Math.floor( Math.random() * ( hi - low + 1 ) );
 };
 
@@ -6,7 +6,7 @@ Array.prototype.shuffle = function() {
   var i = this.length, j, temp;
   if ( i == 0 ) return this;
   while ( --i ) {
-    j = Math.randomInt(0, i);
+    j = random(0, i);
     temp = this[i];
     this[i] = this[j];
     this[j] = temp;
@@ -103,7 +103,7 @@ function renderNextQuestion () {
 
 function getNextQuestion () {
   var q = {};
-  if (Math.randomInt(0,1) == 0) {
+  if (random(0,1) == 0) {
     q.q = questionPool[0][0];
     q.o = questionPool[0][1];
     q.x = questionPool[1][1];
