@@ -15,7 +15,7 @@ lesson[1] = [
   [ '教師　（きょうし）', 'teacher (job)' ],
   [ '学生　（がくせい）', 'student' ],
   [ '会社員　（かいしゃいん）', 'company employee' ],
-  [ '＿の社員　（＿の社員）', 'employee of _ company' ],
+  [ '＿の社員　（＿のしゃいん）', 'employee of _ company' ],
   [ '銀行員　（ぎんこういん）', 'bank employee' ],
   [ '医者　（いしゃ）', '(medical) doctor' ],
   [ '研究者　（けんきゅうしゃ）', 'scholar, researcher' ],
