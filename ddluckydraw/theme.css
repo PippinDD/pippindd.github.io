@@ -1,0 +1,26 @@
+/* Styles */
+  html,body {
+  height:100%;
+  margin:0;
+}
+
+.content {
+  height:100%;
+  min-height:100%;/*for mozilla*/
+}
+
+html>body .content {
+  height:auto;
+}
+
+#play-area {
+  background:#C00;
+}
+
+.item-house {
+  width: 300px;
+  height: 259px;
+  background: url("img/propertyguru-300x259.original.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
