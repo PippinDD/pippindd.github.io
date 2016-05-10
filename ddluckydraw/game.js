@@ -17,7 +17,10 @@ function elKey(number) {
 }
 
 function elGear() {
-  return $("<div>").addClass("item-gear").on("touchend", onGearClick);
+  return $("<div>").addClass("item-gear").on({
+    "click" : onGearClick,
+    "touchstart" : onGearClick
+  });
 }
 
 function renderPlayArea() {

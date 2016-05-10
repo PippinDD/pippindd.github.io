@@ -48,6 +48,6 @@ html>body .content {
 }
 
 .item-gear {
-  position: absolute; width: 128px; height: 128px; top: 0px; right: 0px;
-  background: url("img/gear.png"); background-repeat: no-repeat; background-position: center center;
+  position: absolute; width: 64px; height: 64px; top: 0px; right: 0px;
+  background: url("img/gear.png"); background-size: 64px 64px; background-repeat: no-repeat; background-position: center center;
 }
