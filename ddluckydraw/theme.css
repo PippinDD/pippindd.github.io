@@ -1,5 +1,6 @@
 /* Styles */
 html,body {
+  background:#C00;
   font-family: Helvetica, Arial;
   height:100%;
   margin:0;
@@ -15,8 +16,13 @@ html>body .content {
 }
 
 #play-area {
-  background:#C00;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  left: 5%;
+  top: 5%;
 }
+
 
 .item-house {
   position: relative; width: 300px; height: 259px; background: url("img/propertyguru-300x259.original.jpg");
