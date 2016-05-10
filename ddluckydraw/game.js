@@ -1,11 +1,47 @@
 var numKeys = 5; // number of key images
 var displayKeys = 10; // number of keys to show
-var stock = {};
+var stock = {
+  "พวงกุญแจ" : 3,
+  "ถุงผ้า" : 2,
+  "เสื้อยืด" : 1
+};
 var playArea;
 
 // https://www.kirupa.com/html5/random_numbers_js.htm
 function random(Low, High) {
   return Math.floor(Math.random()*(1+High-Low))+Low;
+}
+
+function getTotalStock() {
+  var totalStock = 0;
+  for (var i in stock) {
+    totalStock += stock[i];
+  }
+  return totalStock;
+}
+
+function randomPrize() {
+  var totalStock = 0;
+  var cumulativeStock = {};
+  for (var i in stock) {
+    cumulativeStock[i] = {};
+    cumulativeStock[i].low = totalStock + 1;
+    cumulativeStock[i].high = totalStock + stock[i];
+    totalStock += stock[i];
+  }
+
+  var randomNumber = random(1, totalStock);
+  var prize = "";
+  for (var i in cumulativeStock) {
+    if (cumulativeStock[i].low <= randomNumber && randomNumber <= cumulativeStock[i].high) {
+      prize = i;
+      break;
+    }
+  }
+
+  stock[i] -= 1;
+  if (stock[i] == 0) delete stock[i];
+  return prize;
 }
 
 function elHouse() {
@@ -38,12 +74,22 @@ function renderPlayArea() {
   gear.css({ position: "absolute", top: 0, right: 0 });
 }
 
+function renderPrize() {
+  var prizeContent = $("#prize-template").html();
+  playArea.empty().html(prizeContent);
+  $(".prize-ok").on("click", onPrizeOkClick);
+}
+
 function onKeyDrop() {
-  alert("dropped!");
+  renderPrize();
 }
 
 function onGearClick() {
   alert("clicked!");
+}
+
+function onPrizeOkClick() {
+  renderPlayArea();
 }
 
 $(function() {
