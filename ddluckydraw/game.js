@@ -2,8 +2,7 @@ var numKeys = 5; // number of key images
 var displayKeys = 10; // number of keys to show
 var stock = {
   "พวงกุญแจ" : 3,
-  "ถุงผ้า" : 2,
-  "เสื้อยืด" : 1
+  "ถุงผ้า" : 2
 };
 var playArea;
 
@@ -53,12 +52,14 @@ function elKey(number) {
 }
 
 function elGear() {
-  return $("<div>").addClass("item-gear").on({
-    "click" : onGearClick
-  });
+  return $("<div>").addClass("item-gear");
 }
 
 function renderPlayArea() {
+  if (getTotalStock() == 0) {
+    renderZeroPrize();
+    return;
+  }
   playArea.empty();
 
   var house = elHouse().appendTo(playArea);
@@ -76,8 +77,26 @@ function renderPlayArea() {
 
 function renderPrize() {
   var prizeContent = $("#prize-template").html();
+  var prize = randomPrize();
+  var stock = getTotalStock();
+  prizeContent = prizeContent.replace("__PRIZE__", prize);
+  prizeContent = prizeContent.replace("__PRIZE_REMAINING__", stock);
+
   playArea.empty().html(prizeContent);
-  $(".prize-ok").on("click", onPrizeOkClick);
+}
+
+function renderZeroPrize() {
+  playArea.empty().html($("#prize-zero-template").html());
+}
+
+function renderSetup() {
+  playArea.empty().html($("#prize-list-template").html());
+
+  prizeList = [];
+  for (var i in stock) {
+    prizeList.push(i + " : " + stock[i]);
+  }
+  $(".prize-list").html(prizeList.join("<br />"));
 }
 
 function onKeyDrop() {
@@ -85,14 +104,20 @@ function onKeyDrop() {
 }
 
 function onGearClick() {
-  alert("clicked!");
+  renderSetup();
 }
 
 function onPrizeOkClick() {
   renderPlayArea();
 }
 
+function bindEvents() {
+  $(document).on("click", ".item-gear", onGearClick);
+  $(document).on("click", ".prize-ok", onPrizeOkClick);
+}
+
 $(function() {
   playArea = $('#play-area');
+  bindEvents();
   renderPlayArea();
 });
