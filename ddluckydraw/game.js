@@ -9,11 +9,15 @@ function random(Low, High) {
 }
 
 function elHouse() {
-  return $("<div>").addClass("item-house").droppable();
+  return $("<div>").addClass("item-house").droppable({ drop : onKeyDrop });
 }
 
 function elKey(number) {
   return $("<div>").addClass("item-key" + (number % numKeys)).draggable();
+}
+
+function elGear() {
+  return $("<div>").addClass("item-gear").on("touchend", onGearClick);
 }
 
 function renderPlayArea() {
@@ -27,6 +31,17 @@ function renderPlayArea() {
     key = elKey(k);
     key.appendTo(playArea).css({ position: "absolute", left: random(0,70) + "%", top: random(20,70) + "%" });
   }
+
+  var gear = elGear().appendTo(playArea);
+  gear.css({ position: "absolute", top: 0, right: 0 });
+}
+
+function onKeyDrop() {
+  alert("dropped!");
+}
+
+function onGearClick() {
+  alert("clicked!");
 }
 
 $(function() {
