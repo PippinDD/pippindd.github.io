@@ -7,7 +7,9 @@ function elHouse() {
 
 function renderPlayArea() {
   playArea.empty();
-  var house = elHouse().appendTo(playArea).draggable();
+
+  var house = elHouse().appendTo(playArea);
+  house.css({ left: "40%" });
 }
 
 $(function() {

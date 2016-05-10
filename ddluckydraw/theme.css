@@ -18,6 +18,7 @@ html>body .content {
 }
 
 .item-house {
+  position: relative;
   width: 300px;
   height: 259px;
   background: url("img/propertyguru-300x259.original.jpg");
