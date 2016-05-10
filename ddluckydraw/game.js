@@ -48,7 +48,7 @@ function elHouse() {
 }
 
 function elKey(number) {
-  return $("<div>").addClass("item-key" + (number % numKeys)).draggable();
+  return $("<div>").addClass("item-key" + (number % numKeys)).draggable({ containment: "parent" });
 }
 
 function elGear() {
