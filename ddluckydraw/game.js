@@ -18,8 +18,7 @@ function elKey(number) {
 
 function elGear() {
   return $("<div>").addClass("item-gear").on({
-    "click" : onGearClick,
-    "touchstart" : onGearClick
+    "click" : onGearClick
   });
 }
 
