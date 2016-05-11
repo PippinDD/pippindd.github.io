@@ -87,6 +87,10 @@ html>body .content {
   font-size: 30px;
 }
 
+.prize-setup-pad > input {
+  font-size: 30px;
+}
+
 .prize-footer {
   position: absolute; width: 100%; top: 60%;
   text-align: center;

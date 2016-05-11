@@ -110,6 +110,13 @@ function renderPrizeSetup() {
     setupItem = $('#prize-setup-item-template').html().replace(/NNN/g, i);
     prizeSetupPad.append(setupItem);
   }
+
+  var i = 0;
+  for (var k in stock) {
+    prizeSetupPad.find("#prize-number-" + i).val(stock[k]);
+    prizeSetupPad.find("#prize-text-" + i).val(k);
+    i++;
+  }
 }
 
 function savePrizeList() {
