@@ -57,13 +57,12 @@ html>body .content {
 
 .item-gear {
   cursor: pointer;
-  position: absolute;
   background: url("img/gear.png");
-  width: 64px; height: 64px; top: 0px; right: 0px;
+  width: 64px; height: 64px;
 }
 
 .prize-header {
-  position: absolute; width: 100%; top: 5%;
+  position: absolute; width: 100%; top: 10%;
   text-align: center;
   font-weight: normal;
   color: black;
@@ -71,24 +70,25 @@ html>body .content {
 }
 
 .prize-list {
-  position: absolute;
-  top: 10%; left: 10%;
-  text-align: left;
   font-weight: normal;
   color: black;
   font-size: 30px;
 }
 
 .prize-display {
-  position: absolute; width: 100%; top: 15%;
+  position: absolute; width: 100%; top: 30%;
   text-align: center;
   font-weight: bold;
   color: black;
   font-size: 80px;
 }
 
+.prize-setup-pad {
+  font-size: 30px;
+}
+
 .prize-footer {
-  position: absolute; width: 100%; top: 80%;
+  position: absolute; width: 100%; top: 60%;
   text-align: center;
   vertical-align: middle;
   font-weight: normal;
@@ -102,17 +102,33 @@ html>body .content {
 
 .prize-ok {
   cursor: pointer;
-  position: absolute; bottom: 2%; right: 2%;
-  text-align: right;
   font-weight: bold;
   color: black;
   font-size: 80px;
 }
 
 .prize-remaining {
-  position: absolute; bottom: 2%; left: 2%;
-  text-align: left;
   font-weight: normal;
   color: black;
   font-size: 30px;
+}
+
+.top-left {
+  position: absolute; top: 2%; left: 2%;
+  text-align: left;
+}
+
+.top-right {
+  position: absolute; top: 2%; right: 2%;
+  text-align: right;
+}
+
+.bottom-right {
+  position: absolute; bottom: 2%; right: 2%;
+  text-align: right;
+}
+
+.bottom-left {
+  position: absolute; bottom: 2%; left: 2%;
+  text-align: left;
 }

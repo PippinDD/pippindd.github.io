@@ -14,23 +14,32 @@
     <div id="display-area"></div>
   </div>
   <div style="display: none" id="play-area-template">
-    <div class="image item-gear"></div>
-    <div class="prize-remaining">__PRIZE_REMAINING__</div>
+    <div class="image item-gear btn-render-prize-list top-right"></div>
+    <div class="prize-remaining bottom-left">__PRIZE_REMAINING__</div>
   </div>
   <div style="display: none" id="prize-template">
     <div class="prize-header">ขอแสดงความยินดีด้วยค่ะ คุณได้รับ</div>
     <div class="prize-display">__PRIZE__</div>
-    <div class="prize-footer">จาก <img src="img/ddproperty_logo.png"></img></div>
-    <div class="prize-ok">OK</div>
-    <div class="prize-remaining">__PRIZE_REMAINING__</div>
+    <div class="prize-footer">จาก<br /><img src="img/ddproperty_logo.png"></img></div>
+    <div class="prize-ok btn-render-play-area bottom-right">OK</div>
+    <div class="prize-remaining bottom-left">__PRIZE_REMAINING__</div>
   </div>
   <div style="display: none" id="prize-zero-template">
     <div class="prize-display">รางวัลหมดแล้วค่ะ</div>
-    <div class="image item-gear"></div>
+    <div class="image item-gear btn-render-prize-list top-right"></div>
   </div>
   <div style="display: none" id="prize-list-template">
-    <div class="prize-list"></div>
-    <div class="prize-ok">OK</div>
+    <div class="prize-list top-left"></div>
+    <div class="prize-ok btn-render-play-area bottom-right">OK</div>
+    <div class="image item-gear btn-render-prize-setup bottom-left"></div>
+  </div>
+  <div style="display: none" id="prize-setup-template">
+    <div class="prize-setup-pad top-left"></div>
+    <div class="prize-ok btn-save-prize-list bottom-right">OK</div>
+  </div>
+  <div style="display: none" id="prize-setup-item-template">
+    <input type="number" min="1" max="999" class="prize-number-edit" id="#prize-number-NNN" /> x
+    <input type="text" class="prize-text-edit" id="#prize-text-NNN" /><br />
   </div>
 </body>
 </html>

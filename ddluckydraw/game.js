@@ -1,12 +1,13 @@
 var numKeys = 16; // number of key images
 var displayKeys = 16; // number of keys to show
+var maxPrizeKinds = 8;
+
 var stock = {
-//  "Starbucks Card มูลค่า 200 ฿" : 5,
-//  "Premium Notebook" : 30,
-//  "Premium T-Shirt" : 20,
-//  "ถุงผ้า" : 50,
-//  "ปากกา" : 50
-  "Starbucks Gift Card <br> มูลค่า 200 ฿" : 1
+  "Starbucks Gift Card มูลค่า 200 ฿" : 5,
+  "Premium Notebook" : 30,
+  "Premium T-Shirt" : 20,
+  "ถุงผ้า" : 50,
+  "ปากกา" : 50
 };
 var displayArea;
 
@@ -52,7 +53,7 @@ function elPlayArea() {
 }
 
 function elHouse() {
-  return $("<div>").addClass("item-house image").droppable({ drop : onKeyDrop });
+  return $("<div>").addClass("item-house image").droppable({ drop : renderPrize });
 }
 
 function elKey(number) {
@@ -101,21 +102,27 @@ function renderPrizeList() {
   $(".prize-list").html(prizeList.join("<br />"));
 }
 
-function onKeyDrop() {
-  renderPrize();
+function renderPrizeSetup() {
+  displayArea.empty().html($("#prize-setup-template").html());
+  var prizeSetupPad = displayArea.find(".prize-setup-pad");
+  var setupItem;
+  for (var i = 0; i < maxPrizeKinds; i++) {
+    setupItem = $('#prize-setup-item-template').html().replace(/NNN/g, i);
+    prizeSetupPad.append(setupItem);
+  }
 }
 
-function onGearClick() {
+function savePrizeList() {
+  // to be implemented
+
   renderPrizeList();
 }
 
-function onPrizeOkClick() {
-  renderPlayArea();
-}
-
 function bindEvents() {
-  $(document).on("click", ".item-gear", onGearClick);
-  $(document).on("click", ".prize-ok", onPrizeOkClick);
+  $(document).on("click", ".btn-render-prize-list", renderPrizeList);
+  $(document).on("click", ".btn-render-prize-setup", renderPrizeSetup);
+  $(document).on("click", ".btn-save-prize-list", savePrizeList);
+  $(document).on("click", ".btn-render-play-area", renderPlayArea);
 }
 
 $(function() {
