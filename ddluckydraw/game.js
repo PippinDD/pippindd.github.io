@@ -71,7 +71,7 @@ function renderPlayArea() {
   displayArea.empty();
   var playArea = elPlayArea().appendTo(displayArea);
   playArea.html($('#play-area-template').html());
-  playArea.find('.prize-remaining-debug').html(getTotalStock());
+  playArea.find('.prize-remaining').html(getTotalStock());
   elHouse().appendTo(playArea);
 
   var randomLeft, randomTopl
