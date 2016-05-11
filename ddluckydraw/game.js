@@ -60,10 +60,6 @@ function elKey(number) {
   return $("<div>").addClass("item-key image").css("background", 'url("img/Key_' + keyNumber + '.png")' ).draggable({ containment: "parent" });
 }
 
-function elGear() {
-  return $("<div>").addClass("item-gear image");
-}
-
 function renderPlayArea() {
   if (getTotalStock() == 0) {
     renderZeroPrize();
@@ -81,7 +77,6 @@ function renderPlayArea() {
     randomTop = random(1,2) == 1 ? random(10,35) : random (65,85);
     elKey(k).appendTo(playArea).css({ position: "absolute", left: randomLeft + "%", top: randomTop + "%" });
   }
-  elGear().appendTo(playArea);
 }
 
 function renderPrize() {
