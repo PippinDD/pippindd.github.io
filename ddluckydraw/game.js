@@ -2,18 +2,31 @@ var numKeys = 16; // number of key images
 var displayKeys = 16; // number of keys to show
 var maxPrizeKinds = 8;
 
-var stock = {
-  "Starbucks Gift Card มูลค่า 200 ฿" : 5,
-  "Premium Notebook" : 30,
-  "Premium T-Shirt" : 20,
-  "ถุงผ้า" : 50,
-  "ปากกา" : 50
-};
+var stock;
 var displayArea;
 
 // https://www.kirupa.com/html5/random_numbers_js.htm
 function random(Low, High) {
   return Math.floor(Math.random()*(1+High-Low))+Low;
+}
+
+function getExampleStock() {
+  return {
+    "Starbucks Gift Card มูลค่า 200 ฿" : 5,
+    "Premium Notebook" : 30,
+    "Premium T-Shirt" : 20,
+    "ถุงผ้า" : 50,
+    "ปากกา" : 50
+  };
+}
+
+function loadStock() {
+  var loaded = localStorage.getItem("stock");
+  stock = loaded == null ? getExampleStock() : JSON.parse(loaded);
+}
+
+function saveStock() {
+  localStorage.setItem("stock", JSON.stringify(stock));
 }
 
 function getTotalStock() {
@@ -62,6 +75,8 @@ function elKey(number) {
 }
 
 function renderPlayArea() {
+  loadStock();
+
   if (getTotalStock() == 0) {
     renderZeroPrize();
     return;
@@ -86,6 +101,7 @@ function renderPrize() {
   prizeContent = prizeContent.replace("__PRIZE_REMAINING__", getTotalStock());
 
   displayArea.empty().html(prizeContent);
+  saveStock();
 }
 
 function renderZeroPrize() {
@@ -120,8 +136,18 @@ function renderPrizeSetup() {
 }
 
 function savePrizeList() {
-  // to be implemented
+  var number;
+  var text;
+  var stockObj = {};
+  for (var i = 0; i < maxPrizeKinds; i++) {
+    number = displayArea.find("#prize-number-" + i).val();
+    number = parseInt(number, 10);
+    text = displayArea.find("#prize-text-" + i).val();
+    if (1 <= number) stockObj[text] = Math.floor(number);
+  }
 
+  stock = stockObj;
+  saveStock();
   renderPrizeList();
 }
 
