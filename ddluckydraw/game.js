@@ -53,7 +53,7 @@ function elHouse() {
 
 function elKey(number) {
   var keyNumber = (number % numKeys) + 1;
-  return $("<div>").addClass("item-key image").css("background", 'url("img/Key' + keyNumber + '.png")' ).draggable({ containment: "parent" });
+  return $("<div>").addClass("item-key image").css("background", 'url("img/Key_' + keyNumber + '.png")' ).draggable({ containment: "parent" });
 }
 
 function elGear() {
