@@ -1,5 +1,5 @@
 var numKeys = 16; // number of key images
-var displayKeys = 16; // number of keys to show
+var displayKeys = 32; // number of keys to show
 var maxPrizeKinds = 8;
 
 var sound = {};
