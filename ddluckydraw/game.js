@@ -1,10 +1,10 @@
-var numKeys = 5; // number of key images
-var displayKeys = 10; // number of keys to show
+var numKeys = 16; // number of key images
+var displayKeys = 16; // number of keys to show
 var stock = {
   "พวงกุญแจ" : 3,
   "ถุงผ้า" : 2
 };
-var playArea;
+var displayArea;
 
 // https://www.kirupa.com/html5/random_numbers_js.htm
 function random(Low, High) {
@@ -43,16 +43,21 @@ function randomPrize() {
   return prize;
 }
 
+function elPlayArea() {
+  return $("<div id='play-area'>");
+}
+
 function elHouse() {
-  return $("<div>").addClass("item-house").droppable({ drop : onKeyDrop });
+  return $("<div>").addClass("item-house image").droppable({ drop : onKeyDrop });
 }
 
 function elKey(number) {
-  return $("<div>").addClass("item-key" + (number % numKeys)).draggable({ containment: "parent" });
+  var keyNumber = (number % numKeys) + 1;
+  return $("<div>").addClass("item-key image").css("background", 'url("img/Key' + keyNumber + '.png")' ).draggable({ containment: "parent" });
 }
 
 function elGear() {
-  return $("<div>").addClass("item-gear");
+  return $("<div>").addClass("item-gear image");
 }
 
 function renderPlayArea() {
@@ -60,19 +65,17 @@ function renderPlayArea() {
     renderZeroPrize();
     return;
   }
-  playArea.empty();
+  displayArea.empty();
+  var playArea = elPlayArea().appendTo(displayArea);
+  elHouse().appendTo(playArea);
 
-  var house = elHouse().appendTo(playArea);
-  house.css({ left: "40%" });
-
-  var key;
+  var randomLeft, randomTopl
   for (var k = 0; k < displayKeys; k++) {
-    key = elKey(k);
-    key.appendTo(playArea).css({ position: "absolute", left: random(0,70) + "%", top: random(20,70) + "%" });
+    randomLeft = random(1,2) == 1 ? random(10,35) : random (65,85);
+    randomTop = random(1,2) == 1 ? random(10,35) : random (65,85);
+    elKey(k).appendTo(playArea).css({ position: "absolute", left: randomLeft + "%", top: randomTop + "%" });
   }
-
-  var gear = elGear().appendTo(playArea);
-  gear.css({ position: "absolute", top: 0, right: 0 });
+  elGear().appendTo(playArea);
 }
 
 function renderPrize() {
@@ -82,15 +85,15 @@ function renderPrize() {
   prizeContent = prizeContent.replace("__PRIZE__", prize);
   prizeContent = prizeContent.replace("__PRIZE_REMAINING__", stock);
 
-  playArea.empty().html(prizeContent);
+  displayArea.empty().html(prizeContent);
 }
 
 function renderZeroPrize() {
-  playArea.empty().html($("#prize-zero-template").html());
+  displayArea.empty().html($("#prize-zero-template").html());
 }
 
 function renderSetup() {
-  playArea.empty().html($("#prize-list-template").html());
+  displayArea.empty().html($("#prize-list-template").html());
 
   prizeList = [];
   for (var i in stock) {
@@ -117,7 +120,7 @@ function bindEvents() {
 }
 
 $(function() {
-  playArea = $('#play-area');
+  displayArea = $('#display-area');
   bindEvents();
   renderPlayArea();
 });
