@@ -2,6 +2,7 @@ var numKeys = 16; // number of key images
 var displayKeys = 16; // number of keys to show
 var maxPrizeKinds = 8;
 
+var sound = {};
 var stock;
 var displayArea;
 
@@ -160,7 +161,7 @@ function bindEvents() {
 }
 
 function initializeSoundSystem () {
-  sound['ding'] = new Audio('sounds/Ding.mp3');
+  sound['ding'] = new Audio('sound/Ding.mp3');
 }
 
 function playSound (id) {
