@@ -172,8 +172,6 @@ function initializeSoundSystem () {
 }
 
 function playSound (id) {
-	var thisTime;
-	var ch = audio;
   sound[id].play();
 	// for (a=0;a<ch.length;a++) {
 	// 	thisTime = new Date();
