@@ -1,8 +1,11 @@
 var numKeys = 16; // number of key images
 var displayKeys = 16; // number of keys to show
 var stock = {
-  "พวงกุญแจ" : 3,
-  "ถุงผ้า" : 2
+  "Starbucks Card มูลค่า 200 ฿" : 5,
+  "Premium Notebook" : 30,
+  "Premium T-Shirt" : 20,
+  "ถุงผ้า" : 50,
+  "ปากกา" : 50
 };
 var displayArea;
 
@@ -67,6 +70,8 @@ function renderPlayArea() {
   }
   displayArea.empty();
   var playArea = elPlayArea().appendTo(displayArea);
+  playArea.html($('#play-area-template').html());
+  playArea.find('.prize-remaining-debug').html(getTotalStock());
   elHouse().appendTo(playArea);
 
   var randomLeft, randomTopl
@@ -80,10 +85,8 @@ function renderPlayArea() {
 
 function renderPrize() {
   var prizeContent = $("#prize-template").html();
-  var prize = randomPrize();
-  var stock = getTotalStock();
-  prizeContent = prizeContent.replace("__PRIZE__", prize);
-  prizeContent = prizeContent.replace("__PRIZE_REMAINING__", stock);
+  prizeContent = prizeContent.replace("__PRIZE__", randomPrize());
+  prizeContent = prizeContent.replace("__PRIZE_REMAINING__", getTotalStock());
 
   displayArea.empty().html(prizeContent);
 }
@@ -92,12 +95,12 @@ function renderZeroPrize() {
   displayArea.empty().html($("#prize-zero-template").html());
 }
 
-function renderSetup() {
+function renderPrizeList() {
   displayArea.empty().html($("#prize-list-template").html());
 
-  prizeList = [];
+  prizeList = ["เหลือรางวัล " + getTotalStock() + " ชิ้น", ""];
   for (var i in stock) {
-    prizeList.push(i + " : " + stock[i]);
+    prizeList.push(stock[i] + " x " + i);
   }
   $(".prize-list").html(prizeList.join("<br />"));
 }
@@ -107,7 +110,7 @@ function onKeyDrop() {
 }
 
 function onGearClick() {
-  renderSetup();
+  renderPrizeList();
 }
 
 function onPrizeOkClick() {
