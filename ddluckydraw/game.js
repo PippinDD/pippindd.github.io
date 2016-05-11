@@ -97,7 +97,7 @@ function renderPlayArea() {
 }
 
 function renderPrize() {
-  playSound('ding');
+  // playSound('ding');
   var prizeContent = $("#prize-template").html();
   prizeContent = prizeContent.replace("__PRIZE__", randomPrize());
   prizeContent = prizeContent.replace("__PRIZE_REMAINING__", getTotalStock());
@@ -145,7 +145,7 @@ function savePrizeList() {
     number = displayArea.find("#prize-number-" + i).val();
     number = parseInt(number, 10);
     text = displayArea.find("#prize-text-" + i).val();
-    if (1 <= number) stockObj[text] = Math.floor(number);
+    if (1 <= number && text != '') stockObj[text] = Math.floor(number);
   }
 
   stock = stockObj;
