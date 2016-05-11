@@ -1,5 +1,5 @@
-var numKeys = 10; // number of key images
-var displayKeys = 20; // number of keys to show
+var numKeys = 16; // number of key images
+var displayKeys = 16; // number of keys to show
 var stock = {
   "พวงกุญแจ" : 3,
   "ถุงผ้า" : 2
