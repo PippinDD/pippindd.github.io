@@ -63,7 +63,7 @@ html>body .content {
 }
 
 .prize-header {
-  position: absolute; width: 100%; top: 10%;
+  position: absolute; width: 100%; top: 5%;
   text-align: center;
   font-weight: normal;
   color: black;
@@ -80,7 +80,7 @@ html>body .content {
 }
 
 .prize-display {
-  position: absolute; width: 100%; top: 25%;
+  position: absolute; width: 100%; top: 15%;
   text-align: center;
   font-weight: bold;
   color: black;
@@ -88,7 +88,7 @@ html>body .content {
 }
 
 .prize-footer {
-  position: absolute; width: 100%; top: 70%;
+  position: absolute; width: 100%; top: 80%;
   text-align: center;
   vertical-align: middle;
   font-weight: normal;
