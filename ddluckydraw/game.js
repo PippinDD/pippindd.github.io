@@ -1,11 +1,12 @@
 var numKeys = 16; // number of key images
 var displayKeys = 16; // number of keys to show
 var stock = {
-  "Starbucks Card มูลค่า 200 ฿" : 5,
-  "Premium Notebook" : 30,
-  "Premium T-Shirt" : 20,
-  "ถุงผ้า" : 50,
-  "ปากกา" : 50
+//  "Starbucks Card มูลค่า 200 ฿" : 5,
+//  "Premium Notebook" : 30,
+//  "Premium T-Shirt" : 20,
+//  "ถุงผ้า" : 50,
+//  "ปากกา" : 50
+  "Starbucks Gift Card <br> มูลค่า 200 ฿" : 1
 };
 var displayArea;
 
