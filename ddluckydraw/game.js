@@ -96,6 +96,7 @@ function renderPlayArea() {
 }
 
 function renderPrize() {
+  playSound('ding');
   var prizeContent = $("#prize-template").html();
   prizeContent = prizeContent.replace("__PRIZE__", randomPrize());
   prizeContent = prizeContent.replace("__PRIZE_REMAINING__", getTotalStock());
@@ -158,8 +159,17 @@ function bindEvents() {
   $(document).on("click", ".btn-render-play-area", renderPlayArea);
 }
 
+function initializeSoundSystem () {
+  sound['ding'] = new Audio('sounds/Ding.mp3');
+}
+
+function playSound (id) {
+  sound[id].play();
+}
+
 $(function() {
   displayArea = $('#display-area');
+  initializeSoundSystem();
   bindEvents();
   renderPlayArea();
 });
