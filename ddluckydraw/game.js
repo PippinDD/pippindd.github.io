@@ -13,7 +13,7 @@ function random(Low, High) {
 
 function getExampleStock() {
   return {
-    "Starbucks Gift Card มูลค่า 200 ฿" : 5,
+    "Starbucks Gift Card 200 ฿" : 5,
     "Premium Notebook" : 30,
     "Premium T-Shirt" : 20,
     "ถุงผ้า" : 50,
