@@ -7,10 +7,10 @@ var ELEMENT = {
 	bottom : null
 };
 var STATE = {
-	top : { top: '-30vh' },
-	line1 : { top: '10vh' },
-	line2 : { top: '50vh' },
-	bottom : { top: '100vh' }
+	top : { top: '5vh', opacity: 0 },
+	line1 : { top: '10vh', opacity: 1 },
+	line2 : { top: '50vh', opacity: 1 },
+	bottom : { top: '70vh', opacity: 0 }
 }
 
 var ANIMATION_LENGTH = 500;
