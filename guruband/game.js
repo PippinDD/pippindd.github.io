@@ -23,7 +23,7 @@ var body;
 $(document).ready(function() {
 	body = $('body');
 	bindKeys();
-	newSong('test');
+	newSong('C01 Rolling in the Deep ศริน');
 });
 
 function bindKeys() {
