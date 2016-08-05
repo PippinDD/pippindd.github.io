@@ -23,7 +23,7 @@ var body;
 $(document).ready(function() {
 	body = $('body');
 	bindKeys();
-	newSong('C01 Rolling in the Deep ศริน');
+	newSong('test');
 });
 
 function bindKeys() {
@@ -98,6 +98,8 @@ function nextLine() {
 	var ahead = 2;
 	var line1 = ELEMENT.line1;
 	var line2 = ELEMENT.line2;
+
+	if (!hasNextLine(1)) return;
 
 	if (line1 != null) {
 		line1.animate(STATE.top, { duration : ANIMATION_LENGTH, queue : false, complete : removeMe });
