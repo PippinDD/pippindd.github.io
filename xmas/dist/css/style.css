@@ -1,0 +1,64 @@
+.slot-collapse .slotMachineContainer div {
+	display: block;
+	height: 54px;
+	font-size: 50px;
+	overflow: hidden;
+}
+
+.right-menu {
+    text-align: center;
+}
+
+.noshow {
+    display: none;
+}
+
+.right-menu > * {
+    margin-bottom: 15px;
+}
+
+.col-sm-4.candidate {
+    padding: 0;
+}
+
+.candidate {
+    text-align: center;
+    font-size: 65px;
+    padding: 30px 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.prize {
+    background-color: #b4005a;
+    color: #fff;
+}
+
+.input-group {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.answer-number {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.candidates-table {
+    font-size: 40px;
+}
+
+.spin-counter {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.btn.lucky-draw {
+    height: 100px;
+    font-size: 60px;
+    padding: auto;
+}
+
+.winner {
+    background: #5cb85c;
+    color: #fff;
+}
